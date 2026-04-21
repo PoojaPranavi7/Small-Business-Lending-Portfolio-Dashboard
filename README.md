@@ -4,17 +4,14 @@ An end-to-end financial data analytics demo simulating portfolio reporting,
 SQL transformation layering, QA validation, and interactive web dashboard
 delivery for a revenue-based alternative lending company.
 
-**Live Dashboard:** [https://<your-github-username>.github.io/Small-Business-Lending-Portfolio-Dashboard/](https://github.com/)
-*(Replace with your GitHub Pages URL once the repo is published.)*
-
 ---
 
 ## Why I built this
 
-I built this as a recruiter-facing demo for a Financial Data Analyst role at an
+I built this as a recruiter-facing demo for Financial Data Analyst role at an
 alternative lending company. The job description talks about automating
 financial reporting, validating portfolio data, and shipping analytics to the
-business — so instead of listing those skills on a résumé, I built a working
+business — so instead of listing those skills on a resume, I built a working
 version of the job.
 
 Every piece of this repo mirrors something an analyst on a lending team
@@ -22,7 +19,7 @@ would actually do on a Tuesday afternoon: generate a realistic book of
 loans, move it through a three-tier SQL pipeline, flag data-quality issues
 before anything reaches a stakeholder, and deliver the final numbers as an
 interactive dashboard a non-technical person can read in thirty seconds.
-The data is mock — the workflow is not.
+The data is mock.
 
 ---
 
@@ -34,10 +31,6 @@ The data is mock — the workflow is not.
 - **Chart.js** — all charts in the web dashboard
 - **PapaParse** — client-side CSV parsing
 - **GitHub Pages** — static hosting for the live dashboard
-
-No frameworks, no npm, no backend server. The web dashboard is a single
-`index.html` that reads the exported CSVs directly from the repo, which
-means it works anywhere a static file server does.
 
 ---
 
@@ -62,15 +55,9 @@ means it works anywhere a static file server does.
         │
         ▼
    CSV Exports  →  index.html  (Chart.js Dashboard)
-        │
-        ▼
-   GitHub Pages  (Live URL)
+    
 ```
 
-Each arrow is a script or SQL file in this repo, so the whole pipeline is
-reproducible from a clean checkout in under a minute.
-
----
 
 ## Phase breakdown
 
@@ -117,11 +104,7 @@ The final deliverable is a single `index.html` page that parses the
 exported CSVs in the browser and renders four interactive views with
 Chart.js. It loads locally from a plain HTTP server and from GitHub Pages
 with no configuration — the whole app is roughly 38 KB of HTML, CSS, and
-JavaScript with two pinned CDN dependencies. The design is intentionally
-quiet: navy header, white cards, one clear chart per question, formatting
-that doesn't fight you (currency with `$` and commas, percentages to one
-decimal). Finance dashboards fail when they try to be clever; this one
-tries not to.
+JavaScript with two pinned CDN dependencies.
 
 ---
 
@@ -154,9 +137,6 @@ python3 -m http.server 8000
 ```
 
 Then open **http://localhost:8000/index.html** in any modern browser.
-
-On GitHub Pages, steps 6 and the URL are replaced with the published
-Pages URL — no server setup required.
 
 ---
 
