@@ -1,0 +1,801 @@
+account_id,business_name,industry,state,disbursement_date,funding_amount,repayment_term_months,factor_rate,origination_fee,repayment_status,monthly_payment_amount
+ACC-0001,Summit Trading Co.,Retail,AL,2024-11-04,31500,9,1.246,473.56,On Track,4361.0
+ACC-0002,Pine Hollow Carpentry,Construction,NH,2024-10-29,90500,18,1.439,2050.72,On Track,7234.97
+ACC-0003,Beacon Storefront,E-Commerce,PA,2024-07-16,28500,9,1.337,557.87,On Track,4233.83
+ACC-0004,Willow Wellness Clinic,Healthcare,NV,2023-04-13,47000,12,1.233,832.12,Paid Off,4829.25
+ACC-0005,Highland Dermatology,Healthcare,MD,2023-08-07,40000,6,1.285,968.16,On Track,8566.67
+ACC-0006,Ironclad Express,Logistics,TN,2024-05-10,60000,18,1.401,1105.59,On Track,4670.0
+ACC-0007,Patriot Mercantile,Retail,ME,2024-12-31,38500,18,1.351,919.5,On Track,2889.64
+ACC-0008,Meridian Excavation,Construction,OK,2024-08-18,47500,12,1.318,982.73,On Track,5217.08
+ACC-0009,Ironclad Cafe,Food & Beverage,MS,2023-11-04,48500,9,1.416,863.36,On Track,7630.67
+ACC-0010,Liberty Apparel,Retail,AK,2023-06-21,36500,9,1.352,623.11,On Track,5483.11
+ACC-0011,Blue River DTC,E-Commerce,NE,2024-12-03,72000,12,1.343,1335.81,On Track,8058.0
+ACC-0012,Maple Lane Hauling,Logistics,AZ,2023-07-21,62500,12,1.207,965.47,On Track,6286.46
+ACC-0013,Brookstone Builders,Construction,WA,2023-09-08,52500,9,1.182,1030.15,Late,6895.0
+ACC-0014,Patriot Excavation,Construction,NM,2024-12-06,43500,9,1.44,1241.03,Defaulted,6960.0
+ACC-0015,Market Street Builders,Construction,ME,2024-02-15,85000,9,1.33,2334.99,On Track,12561.11
+ACC-0016,Golden State Roofing,Construction,MO,2023-07-13,48500,12,1.275,998.13,On Track,5153.12
+ACC-0017,Rocky Peak Digital,E-Commerce,NM,2023-01-04,46500,12,1.327,1099.14,Paid Off,5142.12
+ACC-0018,Mainline Market,Retail,IN,2023-11-11,58500,12,1.169,1375.36,Paid Off,5698.88
+ACC-0019,Pioneer Trucking,Logistics,IA,2024-12-21,140000,12,1.397,3840.35,On Track,16298.33
+ACC-0020,Summit Dermatology,Healthcare,MA,2023-11-13,26500,9,1.215,491.43,On Track,3577.5
+ACC-0021,Lakeside DTC,E-Commerce,IL,2024-05-26,84000,9,1.391,1633.45,On Track,12982.67
+ACC-0022,Trailhead Family Dental,Healthcare,PA,2023-07-04,19500,6,1.31,380.77,Paid Off,4257.5
+ACC-0023,Summit Kitchen,Food & Beverage,CO,2024-07-20,62000,12,1.233,968.01,On Track,6370.5
+ACC-0024,Stonebridge Freight,Logistics,TN,2024-07-21,131000,9,1.159,2583.36,On Track,16869.89
+ACC-0025,Pioneer Masonry,Construction,LA,2024-03-20,72000,9,1.395,2028.15,On Track,11160.0
+ACC-0026,Crossroads Commerce Co.,E-Commerce,NH,2024-07-18,60500,9,1.203,1735.13,On Track,8086.83
+ACC-0027,New Day Physical Therapy,Healthcare,DE,2024-02-28,40500,9,1.166,674.1,On Track,5247.0
+ACC-0028,Lakeside Excavation,Construction,MD,2023-10-04,56000,12,1.377,1224.77,Paid Off,6426.0
+ACC-0029,Golden State Online,E-Commerce,PA,2024-06-23,48000,9,1.255,994.57,On Track,6693.33
+ACC-0030,Liberty Home Health,Healthcare,IN,2024-09-02,35500,6,1.267,793.08,On Track,7496.42
+ACC-0031,New Day Dermatology,Healthcare,CT,2024-09-06,47000,12,1.224,1096.08,On Track,4794.0
+ACC-0032,Maple Lane Pizzeria,Food & Beverage,NE,2023-06-05,61500,9,1.408,941.19,Late,9621.33
+ACC-0033,Mainline Goods,Retail,FL,2024-05-09,36000,9,1.239,994.81,On Track,4956.0
+ACC-0034,Pioneer Commerce Co.,E-Commerce,KS,2023-01-04,35500,9,1.213,1050.98,On Track,4784.61
+ACC-0035,Rocky Peak Freight,Logistics,MN,2024-02-23,26000,12,1.243,644.83,On Track,2693.17
+ACC-0036,Rocky Peak Mercantile,Retail,NH,2024-02-22,68000,9,1.211,1693.66,Late,9149.78
+ACC-0037,Copper Trucking,Logistics,NY,2023-09-23,74000,12,1.245,1696.06,Late,7677.5
+ACC-0038,Patriot Electric,Construction,ND,2024-12-27,62500,18,1.175,1250.88,Late,4079.86
+ACC-0039,Cedar Grove Pizzeria,Food & Beverage,TX,2024-10-07,93500,12,1.198,1611.44,Paid Off,9334.42
+ACC-0040,Willow DTC,E-Commerce,AR,2023-01-29,57500,9,1.275,1366.25,On Track,8145.83
+ACC-0041,Harbor Dry Goods,Retail,ME,2023-06-02,68000,12,1.414,1065.84,On Track,8012.67
+ACC-0042,Rocky Peak Contracting,Construction,AL,2023-06-02,65000,9,1.167,1778.89,On Track,8428.33
+ACC-0043,Pioneer Remodeling,Construction,AL,2024-10-18,52500,9,1.214,1118.97,Paid Off,7081.67
+ACC-0044,Ironclad Wellness Clinic,Healthcare,HI,2024-01-15,41000,12,1.423,870.07,Paid Off,4861.92
+ACC-0045,Summit Mercantile,Retail,NJ,2024-06-16,186000,9,1.417,3702.81,On Track,29284.67
+ACC-0046,Harbor Logistics Group,Logistics,VT,2024-08-15,43000,6,1.354,1270.23,Late,9703.67
+ACC-0047,Cedar Grove Dermatology,Healthcare,RI,2024-07-15,38000,9,1.222,669.7,On Track,5159.56
+ACC-0048,Compass Hauling,Logistics,NC,2023-03-07,70000,6,1.276,1208.87,On Track,14886.67
+ACC-0049,Pine Hollow Builders,Construction,RI,2023-04-13,63000,9,1.213,1101.43,On Track,8491.0
+ACC-0050,Evergreen Masonry,Construction,FL,2023-10-16,25500,12,1.189,634.39,Late,2526.62
+ACC-0051,Summit Builders,Construction,TN,2023-09-05,102000,18,1.264,3047.6,Defaulted,7162.67
+ACC-0052,Redwood Eatery,Food & Beverage,VT,2024-06-30,52000,6,1.323,963.67,On Track,11466.0
+ACC-0053,Rocky Peak Medical Group,Healthcare,CA,2023-04-25,30000,12,1.258,857.53,Defaulted,3145.0
+ACC-0054,Prairie Wellness Clinic,Healthcare,MS,2023-09-29,106000,9,1.333,2033.0,Late,15699.78
+ACC-0055,Coastal Family Dental,Healthcare,TN,2023-06-22,77500,6,1.239,1915.68,Late,16003.75
+ACC-0056,Meridian Outfitters,Retail,MS,2023-05-19,27500,9,1.254,429.21,Late,3831.67
+ACC-0057,Coastal Outlet,E-Commerce,TX,2023-05-07,146000,6,1.387,3275.48,On Track,33750.33
+ACC-0058,Sapphire Emporium,Retail,WA,2023-05-23,79000,9,1.413,1960.67,Late,12403.0
+ACC-0059,Willow Remodeling,Construction,MS,2024-02-17,54500,9,1.247,1255.94,Paid Off,7551.28
+ACC-0060,Golden State Masonry,Construction,AZ,2023-10-27,132000,9,1.321,2450.91,Paid Off,19374.67
+ACC-0061,Market Street Dispatch,Logistics,LA,2023-11-15,60000,12,1.233,1645.65,On Track,6165.0
+ACC-0062,Rocky Peak Contracting,Construction,HI,2023-12-17,54000,6,1.166,1595.81,Paid Off,10494.0
+ACC-0063,Golden State Dermatology,Healthcare,MS,2024-06-25,38500,6,1.371,842.69,Defaulted,8797.25
+ACC-0064,Willow Delivery Co.,Logistics,NJ,2024-09-21,75500,6,1.201,1852.68,On Track,15112.58
+ACC-0065,Prairie Vision Center,Healthcare,MS,2024-01-20,71500,12,1.278,1920.22,Defaulted,7614.75
+ACC-0066,Cedar Grove Coffee Co.,Food & Beverage,GA,2024-04-14,55500,9,1.296,1033.54,On Track,7992.0
+ACC-0067,Golden State Hauling,Logistics,KS,2024-06-23,35500,12,1.205,992.82,On Track,3564.79
+ACC-0068,Rocky Peak Dermatology,Healthcare,ND,2024-05-19,59000,9,1.178,1132.98,On Track,7722.44
+ACC-0069,Stonebridge Outfitters,Retail,AK,2023-04-09,53000,6,1.254,1411.79,Late,11077.0
+ACC-0070,Lone Star Vision Center,Healthcare,HI,2024-12-19,26500,18,1.436,442.06,Paid Off,2114.11
+ACC-0071,Patriot HVAC Services,Construction,VT,2023-05-01,24500,6,1.335,473.48,On Track,5451.25
+ACC-0072,Trailhead Grill,Food & Beverage,CA,2023-10-29,75000,6,1.264,1725.32,Paid Off,15800.0
+ACC-0073,Maple Lane Wellness Clinic,Healthcare,MA,2024-04-22,13000,6,1.162,297.36,On Track,2517.67
+ACC-0074,New Day Outfitters,Retail,HI,2023-10-22,61500,18,1.33,1707.02,On Track,4544.17
+ACC-0075,Old Town Roofing,Construction,CO,2023-06-27,42500,12,1.178,1272.53,Late,4172.08
+ACC-0076,Harbor Urgent Care,Healthcare,MI,2024-11-05,113000,12,1.313,1876.72,Paid Off,12364.08
+ACC-0077,Emerald Grill,Food & Beverage,NE,2023-02-22,42000,18,1.376,800.97,Late,3210.67
+ACC-0078,Horizon Coffee Co.,Food & Beverage,FL,2023-06-29,79000,6,1.277,1608.75,Paid Off,16813.83
+ACC-0079,Prairie DTC,E-Commerce,AR,2024-12-26,44000,18,1.24,976.09,Defaulted,3031.11
+ACC-0080,New Day HVAC Services,Construction,CT,2024-06-17,58500,9,1.164,1310.91,On Track,7566.0
+ACC-0081,Stonebridge Cartage,Logistics,NC,2023-03-05,82500,12,1.157,2297.04,On Track,7954.38
+ACC-0082,Mainline Physical Therapy,Healthcare,UT,2024-07-05,42500,9,1.279,1128.73,On Track,6039.72
+ACC-0083,Old Town Supply Co.,Retail,GA,2024-12-09,95000,9,1.415,1451.86,Paid Off,14936.11
+ACC-0084,Emerald Plumbing,Construction,KY,2023-03-13,32000,18,1.223,698.41,Paid Off,2174.22
+ACC-0085,Keystone Online,E-Commerce,LA,2023-10-30,64500,6,1.322,1565.49,Paid Off,14211.5
+ACC-0086,Lakeside HVAC Services,Construction,ME,2023-12-09,91500,18,1.355,2004.39,On Track,6887.92
+ACC-0087,Lone Star Emporium,Retail,IL,2023-04-06,79000,9,1.168,1339.81,On Track,10252.44
+ACC-0088,Stonebridge Bistro,Food & Beverage,AZ,2023-05-27,158000,12,1.196,3312.01,Paid Off,15747.33
+ACC-0089,Harbor Electric,Construction,NE,2023-05-08,36000,18,1.249,762.29,Defaulted,2498.0
+ACC-0090,Urban Electric,Construction,LA,2023-05-16,26000,6,1.351,463.21,On Track,5854.33
+ACC-0091,Sapphire Medical Group,Healthcare,LA,2023-10-22,32000,18,1.282,843.03,On Track,2279.11
+ACC-0092,Willow Masonry,Construction,IN,2023-12-06,79000,12,1.37,1565.86,On Track,9019.17
+ACC-0093,Sapphire Hauling,Logistics,WA,2023-06-23,72500,12,1.41,1728.02,On Track,8518.75
+ACC-0094,Emerald Urgent Care,Healthcare,NM,2023-07-31,58000,6,1.378,1318.69,On Track,13320.67
+ACC-0095,Golden State Logistics Group,Logistics,MA,2023-05-21,29500,12,1.448,830.76,On Track,3559.67
+ACC-0096,Urban Taproom,Food & Beverage,HI,2024-08-04,84000,12,1.376,1413.74,Paid Off,9632.0
+ACC-0097,Silver Creek Grill,Food & Beverage,SD,2023-06-04,28000,9,1.406,467.99,On Track,4374.22
+ACC-0098,Cedar Grove Masonry,Construction,VT,2024-10-25,104000,6,1.4,2028.5,On Track,24266.67
+ACC-0099,Cedar Grove Shop,E-Commerce,AK,2024-01-29,250000,9,1.369,5367.06,On Track,38027.78
+ACC-0100,New Day Supply Co.,Retail,WA,2024-08-09,67500,18,1.391,1314.77,Defaulted,5216.25
+ACC-0101,Pioneer Remodeling,Construction,OH,2024-04-10,76000,6,1.43,2010.03,On Track,18113.33
+ACC-0102,Willow Eatery,Food & Beverage,CA,2023-07-14,42000,12,1.293,784.52,On Track,4525.5
+ACC-0103,Maple Lane Carpentry,Construction,PA,2024-03-15,20500,18,1.341,333.57,On Track,1527.25
+ACC-0104,Mainline Supply Co.,Retail,CO,2023-07-20,39500,6,1.304,837.68,Paid Off,8584.67
+ACC-0105,Beacon Electric,Construction,AZ,2023-03-28,30000,6,1.405,798.02,Late,7025.0
+ACC-0106,Cascade Remodeling,Construction,CO,2023-07-06,25000,12,1.279,693.96,On Track,2664.58
+ACC-0107,Golden State Plumbing,Construction,MN,2023-07-21,142000,6,1.396,3692.02,On Track,33038.67
+ACC-0108,Pine Hollow Commerce Co.,E-Commerce,NM,2023-04-09,64000,12,1.39,1495.57,On Track,7413.33
+ACC-0109,Highland Chiropractic,Healthcare,MA,2023-01-18,68000,12,1.439,1758.68,Paid Off,8154.33
+ACC-0110,Ironclad Contracting,Construction,CT,2024-11-20,46500,12,1.225,1172.77,Defaulted,4746.88
+ACC-0111,Ironclad Kitchen,Food & Beverage,GA,2024-01-11,50000,9,1.363,925.77,On Track,7572.22
+ACC-0112,Market Street Excavation,Construction,TX,2023-10-21,93500,12,1.377,2174.94,On Track,10729.12
+ACC-0113,Hometown Online,E-Commerce,WI,2024-11-10,54000,12,1.431,1434.19,Late,6439.5
+ACC-0114,Evergreen Physical Therapy,Healthcare,PA,2023-06-14,73500,9,1.422,1452.13,Paid Off,11613.0
+ACC-0115,Granite Shop,E-Commerce,CO,2023-10-22,49500,12,1.322,1228.08,On Track,5453.25
+ACC-0116,Bayview Digital,E-Commerce,SD,2024-09-10,45500,18,1.324,1011.11,On Track,3346.78
+ACC-0117,Beacon Trading Co.,Retail,OH,2024-04-07,25500,12,1.2,574.96,On Track,2550.0
+ACC-0118,Evergreen Market,Retail,NE,2023-10-19,18500,9,1.442,302.49,Late,2964.11
+ACC-0119,Trailhead Kitchen,Food & Beverage,DE,2023-07-07,47500,9,1.227,1187.18,Paid Off,6475.83
+ACC-0120,Sunrise Dry Goods,Retail,WY,2023-01-26,56500,6,1.367,1581.17,Paid Off,12872.58
+ACC-0121,Vanguard Home Health,Healthcare,MN,2023-03-04,27000,9,1.389,462.28,Late,4167.0
+ACC-0122,Prairie Plumbing,Construction,AZ,2023-04-29,54000,6,1.282,1106.55,On Track,11538.0
+ACC-0123,Vanguard Digital,E-Commerce,HI,2024-07-29,56500,18,1.213,888.75,On Track,3807.47
+ACC-0124,Northwind Pediatrics,Healthcare,MA,2024-04-12,17000,9,1.207,262.56,On Track,2279.89
+ACC-0125,Liberty Trucking,Logistics,AR,2023-11-13,33000,12,1.407,984.88,Late,3869.25
+ACC-0126,Pine Hollow Shop,E-Commerce,KY,2024-07-26,69000,6,1.303,1545.74,Paid Off,14984.5
+ACC-0127,Pine Hollow Apparel,Retail,MS,2023-04-28,68000,9,1.177,1382.63,On Track,8892.89
+ACC-0128,Evergreen Carpentry,Construction,WV,2023-06-04,29000,9,1.365,554.57,On Track,4398.33
+ACC-0129,Rocky Peak Storefront,E-Commerce,CA,2023-10-15,60000,9,1.225,1782.01,Paid Off,8166.67
+ACC-0130,Sunrise Shop,E-Commerce,NH,2024-11-01,96500,12,1.413,1812.63,Paid Off,11362.88
+ACC-0131,Meridian DTC,E-Commerce,VA,2024-03-25,84500,18,1.243,2187.34,Paid Off,5835.19
+ACC-0132,Stonebridge Storefront,E-Commerce,SD,2024-09-14,52000,18,1.21,1001.33,On Track,3495.56
+ACC-0133,Compass Trading Co.,Retail,WA,2023-07-01,42500,6,1.175,682.44,Defaulted,8322.92
+ACC-0134,Keystone DTC,E-Commerce,FL,2024-09-12,39000,12,1.303,984.72,Late,4234.75
+ACC-0135,Midtown Builders,Construction,SD,2023-02-22,71000,6,1.285,1066.74,Paid Off,15205.83
+ACC-0136,Liberty Bistro,Food & Beverage,WI,2023-06-16,61000,18,1.375,1533.31,Paid Off,4659.72
+ACC-0137,Compass Fulfillment,E-Commerce,KY,2024-01-18,78000,12,1.289,1462.94,Defaulted,8378.5
+ACC-0138,Lone Star Outfitters,Retail,MO,2023-02-06,59000,9,1.253,1545.3,Defaulted,8214.11
+ACC-0139,Vanguard Wellness Clinic,Healthcare,NE,2024-09-19,86500,6,1.228,2296.25,Paid Off,17703.67
+ACC-0140,Prairie Home Health,Healthcare,MO,2024-09-26,58000,6,1.233,1499.97,On Track,11919.0
+ACC-0141,Keystone Fleet Services,Logistics,IA,2024-01-31,84500,9,1.428,1298.53,On Track,13407.33
+ACC-0142,Old Town Taproom,Food & Beverage,WI,2023-08-12,89000,18,1.2,2274.49,Late,5933.33
+ACC-0143,Redwood Eatery,Food & Beverage,WV,2023-03-14,35500,12,1.446,1059.75,Paid Off,4277.75
+ACC-0144,Pioneer Dermatology,Healthcare,MD,2024-03-28,20500,18,1.248,382.11,On Track,1421.33
+ACC-0145,Heritage Trucking,Logistics,SD,2024-01-29,128500,6,1.177,2456.09,On Track,25207.42
+ACC-0146,Pine Hollow Cartage,Logistics,MD,2024-07-09,63500,12,1.225,1727.38,Defaulted,6482.29
+ACC-0147,Mainline Trading Co.,Retail,SC,2024-03-16,21500,9,1.168,374.23,Late,2790.22
+ACC-0148,Midtown Kitchen,Food & Beverage,NJ,2023-04-04,37000,12,1.387,921.62,Defaulted,4276.58
+ACC-0149,Hometown Remodeling,Construction,MS,2023-03-31,84000,9,1.304,2211.33,On Track,12170.67
+ACC-0150,Ironclad Emporium,Retail,CT,2024-07-24,47000,9,1.251,731.2,Late,6533.0
+ACC-0151,Lone Star Cartage,Logistics,NC,2023-04-27,41500,12,1.349,967.22,Late,4665.29
+ACC-0152,Trailhead Cafe,Food & Beverage,KY,2024-11-17,119000,6,1.339,2812.94,On Track,26556.83
+ACC-0153,Downtown Trucking,Logistics,HI,2023-03-19,31000,9,1.432,606.1,On Track,4932.44
+ACC-0154,Golden State Smokehouse,Food & Beverage,GA,2024-06-16,35500,12,1.438,999.15,Defaulted,4254.08
+ACC-0155,Old Town Family Dental,Healthcare,WY,2024-12-13,62000,6,1.354,1081.36,On Track,13991.33
+ACC-0156,Brookstone Direct,E-Commerce,CO,2023-11-19,68000,18,1.395,1391.48,Paid Off,5270.0
+ACC-0157,Silver Creek Mercantile,Retail,SC,2023-02-11,72500,12,1.388,2010.43,Paid Off,8385.83
+ACC-0158,Silver Creek Marketplace,E-Commerce,UT,2024-10-02,91000,12,1.297,1625.23,Paid Off,9835.58
+ACC-0159,Crossroads Fulfillment,E-Commerce,AK,2023-05-17,61500,12,1.361,1680.22,On Track,6975.12
+ACC-0160,Beacon HVAC Services,Construction,NJ,2024-01-21,72000,12,1.173,1165.39,Paid Off,7038.0
+ACC-0161,Summit Freight,Logistics,NH,2024-12-20,47500,12,1.377,1061.08,On Track,5450.62
+ACC-0162,Cascade Direct,E-Commerce,LA,2024-06-28,57000,18,1.439,919.41,Late,4556.83
+ACC-0163,Mainline Home Health,Healthcare,ND,2023-02-03,58500,12,1.175,1472.36,On Track,5728.12
+ACC-0164,Mainline Pediatrics,Healthcare,MA,2024-08-22,62000,9,1.401,1665.26,Paid Off,9651.33
+ACC-0165,Willow Pediatrics,Healthcare,MI,2023-04-28,84000,6,1.43,2330.82,Late,20020.0
+ACC-0166,Prairie Masonry,Construction,MI,2024-07-01,74500,12,1.218,2214.06,On Track,7561.75
+ACC-0167,Horizon Pizzeria,Food & Beverage,SD,2024-03-29,56500,6,1.307,1417.03,On Track,12307.58
+ACC-0168,Emerald Kitchen,Food & Beverage,NY,2023-07-30,35000,9,1.428,928.76,Late,5553.33
+ACC-0169,Beacon Urgent Care,Healthcare,ME,2023-11-06,57000,6,1.438,1287.42,On Track,13661.0
+ACC-0170,Compass Supply Co.,Retail,WA,2023-03-28,54000,12,1.188,1549.32,On Track,5346.0
+ACC-0171,First Avenue Trading Co.,Retail,SD,2024-12-22,61000,6,1.255,1504.04,On Track,12759.17
+ACC-0172,Keystone Dry Goods,Retail,WA,2023-06-24,185000,12,1.359,5226.86,Defaulted,20951.25
+ACC-0173,Midtown HVAC Services,Construction,OR,2023-08-14,41000,12,1.216,759.8,Paid Off,4154.67
+ACC-0174,Cedar Grove Remodeling,Construction,MD,2024-01-03,69500,12,1.247,1560.35,On Track,7222.21
+ACC-0175,Patriot Excavation,Construction,RI,2024-05-06,99000,9,1.157,2568.78,Defaulted,12727.0
+ACC-0176,Coastal Vision Center,Healthcare,KY,2024-01-05,58000,12,1.196,1046.37,On Track,5780.67
+ACC-0177,Sunrise Carpentry,Construction,IN,2024-01-05,199000,12,1.319,3615.85,On Track,21873.42
+ACC-0178,Downtown Supply Co.,Retail,MN,2024-03-01,44500,9,1.346,1320.34,On Track,6655.22
+ACC-0179,Maple Lane Express,Logistics,WI,2024-09-18,65500,12,1.345,1409.5,On Track,7341.46
+ACC-0180,Highland Shop,E-Commerce,NH,2023-10-16,35500,9,1.384,629.32,On Track,5459.11
+ACC-0181,Sapphire Cartage,Logistics,MD,2024-08-31,45500,18,1.275,908.72,Paid Off,3222.92
+ACC-0182,Mainline Supply Co.,Retail,MS,2024-07-29,63000,6,1.232,1320.52,On Track,12936.0
+ACC-0183,Pine Hollow Wellness Clinic,Healthcare,IA,2024-12-03,87500,12,1.155,2130.3,Paid Off,8421.88
+ACC-0184,Blue River Plumbing,Construction,NC,2024-10-29,65500,12,1.212,1889.36,On Track,6615.5
+ACC-0185,Crossroads Dermatology,Healthcare,LA,2024-08-06,110000,9,1.244,3277.87,On Track,15204.44
+ACC-0186,Brookstone Pediatrics,Healthcare,NV,2023-06-30,52000,12,1.203,1288.33,On Track,5213.0
+ACC-0187,Highland Outfitters,Retail,ME,2024-07-20,46000,6,1.156,1172.95,Paid Off,8862.67
+ACC-0188,Summit Urgent Care,Healthcare,KY,2024-06-22,243500,12,1.197,4827.98,Paid Off,24289.12
+ACC-0189,Downtown Cafe,Food & Beverage,WI,2023-07-31,68500,12,1.35,1908.23,On Track,7706.25
+ACC-0190,Golden State Kitchen,Food & Beverage,LA,2024-05-10,37000,6,1.339,675.88,On Track,8257.17
+ACC-0191,Emerald Carpentry,Construction,AR,2023-07-04,37500,6,1.431,622.34,On Track,8943.75
+ACC-0192,Patriot Marketplace,E-Commerce,ME,2024-01-18,32500,12,1.389,961.96,Late,3761.88
+ACC-0193,Sunrise Shop,E-Commerce,NE,2024-08-05,92000,9,1.32,2572.51,On Track,13493.33
+ACC-0194,Stonebridge Vision Center,Healthcare,CA,2023-05-18,45000,18,1.191,879.96,Late,2977.5
+ACC-0195,Granite Freight,Logistics,KS,2023-09-04,59000,12,1.319,1482.53,On Track,6485.08
+ACC-0196,Prairie Mercantile,Retail,FL,2024-08-04,53000,12,1.168,1166.28,On Track,5158.67
+ACC-0197,Oakline Medical Group,Healthcare,MT,2023-11-28,82000,9,1.279,1627.45,Paid Off,11653.11
+ACC-0198,Cedar Grove Goods,Retail,OR,2024-12-03,34500,12,1.267,665.91,On Track,3642.62
+ACC-0199,Vanguard Dermatology,Healthcare,WI,2023-01-06,30500,18,1.278,519.73,On Track,2165.5
+ACC-0200,Pioneer Hauling,Logistics,MD,2024-06-11,62000,6,1.234,1440.87,Defaulted,12751.33
+ACC-0201,Market Street Chiropractic,Healthcare,UT,2024-08-18,76500,9,1.356,1659.97,On Track,11526.0
+ACC-0202,Crossroads Logistics Group,Logistics,HI,2024-11-01,66000,9,1.402,1497.06,On Track,10281.33
+ACC-0203,Heritage Dermatology,Healthcare,SC,2023-04-25,35000,9,1.381,638.06,On Track,5370.56
+ACC-0204,Pine Hollow Remodeling,Construction,NH,2024-12-20,80000,12,1.338,2326.33,On Track,8920.0
+ACC-0205,Lakeside Dermatology,Healthcare,PA,2023-10-14,36500,9,1.312,897.13,Late,5320.89
+ACC-0206,Brookstone Pizzeria,Food & Beverage,PA,2023-09-15,41500,12,1.159,1182.5,On Track,4008.21
+ACC-0207,Lone Star Excavation,Construction,NE,2023-09-17,32500,9,1.367,540.77,Defaulted,4936.39
+ACC-0208,Evergreen Trucking,Logistics,IL,2024-04-11,112500,6,1.313,2738.56,Paid Off,24618.75
+ACC-0209,Pine Hollow Pizzeria,Food & Beverage,NE,2024-04-26,78000,9,1.231,2163.87,Defaulted,10668.67
+ACC-0210,Pioneer HVAC Services,Construction,TN,2023-12-13,76500,18,1.248,1527.23,Late,5304.0
+ACC-0211,Heritage Taproom,Food & Beverage,WI,2023-02-21,109000,12,1.431,1954.06,Defaulted,12998.25
+ACC-0212,New Day Masonry,Construction,WA,2024-12-22,250000,9,1.337,4743.83,Paid Off,37138.89
+ACC-0213,Prairie Carpentry,Construction,GA,2023-06-12,21500,12,1.293,410.52,On Track,2316.62
+ACC-0214,Copper Dermatology,Healthcare,NJ,2023-03-10,36500,6,1.336,792.34,On Track,8127.33
+ACC-0215,Stonebridge Roofing,Construction,CO,2024-03-12,39000,9,1.274,775.69,Paid Off,5520.67
+ACC-0216,Hometown Pizzeria,Food & Beverage,ND,2023-10-29,34500,9,1.291,657.88,On Track,4948.83
+ACC-0217,New Day Market,Retail,WY,2024-03-25,30500,18,1.237,754.19,Paid Off,2096.03
+ACC-0218,Brookstone Trading Co.,Retail,AZ,2024-10-02,46500,12,1.282,734.49,On Track,4967.75
+ACC-0219,Summit Wellness Clinic,Healthcare,NC,2023-03-13,28000,12,1.356,562.95,Late,3164.0
+ACC-0220,Lakeside Freight,Logistics,WV,2023-07-27,66000,6,1.162,1672.85,On Track,12782.0
+ACC-0221,Pine Hollow Market,Retail,TX,2024-01-13,56500,6,1.389,996.53,Defaulted,13079.75
+ACC-0222,New Day Chiropractic,Healthcare,MD,2024-07-29,71500,12,1.235,1309.45,On Track,7358.54
+ACC-0223,Market Street Carpentry,Construction,CO,2024-03-15,72500,9,1.355,1305.72,On Track,10915.28
+ACC-0224,Mainline Grill,Food & Beverage,WA,2023-10-07,76500,18,1.343,1148.56,Late,5707.75
+ACC-0225,Midtown Carpentry,Construction,WA,2024-03-21,45000,12,1.346,994.79,Late,5047.5
+ACC-0226,Golden State Grill,Food & Beverage,NH,2024-12-17,176500,9,1.332,2750.64,Paid Off,26122.0
+ACC-0227,Evergreen Remodeling,Construction,WI,2023-12-17,62500,12,1.438,1193.38,Defaulted,7489.58
+ACC-0228,Heritage Online,E-Commerce,AL,2024-10-07,19500,18,1.303,583.48,On Track,1411.58
+ACC-0229,Northwind Fulfillment,E-Commerce,NM,2024-07-24,31500,9,1.37,906.44,Late,4795.0
+ACC-0230,Willow Eatery,Food & Beverage,AK,2023-08-09,21000,12,1.362,382.75,On Track,2383.5
+ACC-0231,Cascade Dermatology,Healthcare,WA,2023-07-02,55500,18,1.221,1090.58,On Track,3764.75
+ACC-0232,Rocky Peak Express,Logistics,OH,2024-07-17,51500,9,1.235,1130.71,On Track,7066.94
+ACC-0233,Northwind Boutique,Retail,VA,2023-06-01,42500,18,1.277,1175.81,On Track,3015.14
+ACC-0234,Ironclad Plumbing,Construction,NH,2023-09-04,166000,6,1.233,4488.59,Paid Off,34113.0
+ACC-0235,Old Town Family Dental,Healthcare,CA,2023-06-22,74500,12,1.26,1258.57,Paid Off,7822.5
+ACC-0236,Coastal Contracting,Construction,AK,2024-03-19,82000,12,1.267,1383.07,On Track,8657.83
+ACC-0237,Keystone DTC,E-Commerce,KY,2023-08-04,33000,12,1.331,701.28,Defaulted,3660.25
+ACC-0238,Meridian Medical Group,Healthcare,PA,2024-04-26,31500,9,1.216,883.62,On Track,4256.0
+ACC-0239,Heritage Pizzeria,Food & Beverage,DE,2024-11-14,56000,12,1.391,1580.95,On Track,6491.33
+ACC-0240,Summit Commerce Co.,E-Commerce,TX,2024-08-29,60500,6,1.281,1004.93,Paid Off,12916.75
+ACC-0241,Beacon Market,Retail,ID,2024-11-23,20000,9,1.362,472.29,On Track,3026.67
+ACC-0242,Highland Commerce Co.,E-Commerce,MO,2023-01-18,50000,9,1.174,866.76,On Track,6522.22
+ACC-0243,Highland Boutique,Retail,HI,2023-11-29,55500,12,1.291,1403.7,Paid Off,5970.88
+ACC-0244,Trailhead Direct,E-Commerce,MS,2023-06-10,49000,9,1.158,1408.58,On Track,6304.67
+ACC-0245,Copper DTC,E-Commerce,MN,2024-11-01,35000,9,1.353,763.75,On Track,5261.67
+ACC-0246,Northwind Dry Goods,Retail,AL,2024-06-04,41000,18,1.253,666.1,Paid Off,2854.06
+ACC-0247,Rocky Peak Builders,Construction,NH,2023-08-23,50000,9,1.435,1184.44,On Track,7972.22
+ACC-0248,Old Town Vision Center,Healthcare,SC,2024-02-16,58000,9,1.247,1225.41,Late,8036.22
+ACC-0249,Cascade Masonry,Construction,WA,2024-03-18,76500,9,1.319,2078.01,Late,11211.5
+ACC-0250,Cedar Grove Boutique,Retail,KY,2023-12-29,99500,6,1.227,2000.46,On Track,20347.75
+ACC-0251,Compass Grill,Food & Beverage,VT,2023-12-13,47000,12,1.336,1321.8,On Track,5232.67
+ACC-0252,Patriot Home Health,Healthcare,UT,2023-02-10,43000,9,1.29,821.54,On Track,6163.33
+ACC-0253,Emerald Coffee Co.,Food & Beverage,WY,2023-11-27,70000,6,1.261,1215.39,Paid Off,14711.67
+ACC-0254,Golden State Bistro,Food & Beverage,ME,2023-09-12,77000,18,1.211,1508.98,On Track,5180.39
+ACC-0255,Prairie Commerce Co.,E-Commerce,TX,2024-08-21,43500,12,1.183,675.28,Defaulted,4288.38
+ACC-0256,Cedar Grove Trading Co.,Retail,NH,2024-09-24,85000,12,1.186,1633.59,On Track,8400.83
+ACC-0257,Meridian Excavation,Construction,AZ,2024-07-02,94500,18,1.45,2353.22,Paid Off,7612.5
+ACC-0258,Trailhead Mercantile,Retail,IN,2023-01-23,112000,18,1.274,1919.04,On Track,7927.11
+ACC-0259,Vanguard Taproom,Food & Beverage,ND,2024-09-06,146500,9,1.151,2442.22,On Track,18735.72
+ACC-0260,Rocky Peak Shop,E-Commerce,FL,2023-10-17,34000,12,1.436,577.52,On Track,4068.67
+ACC-0261,Copper Roofing,Construction,MI,2023-11-01,55500,12,1.156,897.06,Paid Off,5346.5
+ACC-0262,Willow Eatery,Food & Beverage,RI,2024-11-21,55500,9,1.276,1560.63,Defaulted,7868.67
+ACC-0263,Market Street Cafe,Food & Beverage,DE,2024-09-25,52000,9,1.365,1516.41,On Track,7886.67
+ACC-0264,Liberty Freight,Logistics,MO,2023-02-07,38500,6,1.424,604.39,On Track,9137.33
+ACC-0265,Liberty Delivery Co.,Logistics,HI,2023-09-21,24500,12,1.364,646.83,On Track,2784.83
+ACC-0266,Rocky Peak Storefront,E-Commerce,NE,2024-07-02,58000,12,1.289,1511.32,On Track,6230.17
+ACC-0267,Sunrise Home Health,Healthcare,IL,2024-01-29,36000,12,1.442,1078.33,Late,4326.0
+ACC-0268,Cedar Grove Dermatology,Healthcare,WI,2023-07-08,57500,9,1.162,1162.54,Defaulted,7423.89
+ACC-0269,Brookstone Direct,E-Commerce,AR,2024-01-19,35500,9,1.446,684.53,Late,5703.67
+ACC-0270,Meridian Marketplace,E-Commerce,WI,2024-09-25,30000,9,1.405,653.89,On Track,4683.33
+ACC-0271,Cedar Grove Cafe,Food & Beverage,SC,2023-06-13,62500,12,1.429,1740.54,On Track,7442.71
+ACC-0272,Copper Supply Co.,Retail,TX,2024-06-29,60000,18,1.226,1555.73,Paid Off,4086.67
+ACC-0273,Silver Creek Apparel,Retail,TX,2024-06-21,75500,18,1.193,1666.61,On Track,5003.97
+ACC-0274,Mainline Logistics Group,Logistics,GA,2024-10-09,183000,18,1.349,3416.33,Paid Off,13714.83
+ACC-0275,Beacon Vision Center,Healthcare,WA,2023-08-06,64000,18,1.305,1657.94,On Track,4640.0
+ACC-0276,Evergreen Urgent Care,Healthcare,NJ,2023-06-07,72000,18,1.307,2002.89,On Track,5228.0
+ACC-0277,Bayview Dermatology,Healthcare,WI,2024-02-05,30500,9,1.427,640.48,Late,4835.94
+ACC-0278,Redwood HVAC Services,Construction,UT,2024-01-24,27000,6,1.336,675.78,On Track,6012.0
+ACC-0279,Urban Outfitters,Retail,NH,2023-10-27,131500,6,1.243,2761.92,Defaulted,27242.42
+ACC-0280,Copper Trading Co.,Retail,ME,2024-07-23,33000,9,1.27,731.85,On Track,4656.67
+ACC-0281,Harbor Kitchen,Food & Beverage,CO,2024-08-07,31000,9,1.19,709.08,On Track,4098.89
+ACC-0282,Urban Physical Therapy,Healthcare,CO,2023-06-29,54000,6,1.208,1438.34,On Track,10872.0
+ACC-0283,Willow Builders,Construction,MD,2024-08-04,52500,18,1.193,1557.29,On Track,3479.58
+ACC-0284,Downtown Chiropractic,Healthcare,SD,2023-06-18,33500,6,1.393,725.79,On Track,7777.58
+ACC-0285,New Day Pediatrics,Healthcare,MT,2023-10-25,46500,18,1.361,936.26,On Track,3515.92
+ACC-0286,First Avenue Delivery Co.,Logistics,MO,2023-01-20,108000,12,1.309,2225.22,Paid Off,11781.0
+ACC-0287,Rocky Peak Emporium,Retail,IL,2023-09-06,35500,12,1.262,603.8,Late,3733.42
+ACC-0288,First Avenue Outlet,E-Commerce,NH,2024-12-01,25500,12,1.351,496.08,On Track,2870.88
+ACC-0289,New Day Storefront,E-Commerce,NY,2023-11-20,92500,9,1.394,1507.45,On Track,14327.22
+ACC-0290,Pine Hollow Vision Center,Healthcare,WY,2024-06-03,72000,12,1.414,1542.13,On Track,8484.0
+ACC-0291,Crossroads Roofing,Construction,OR,2023-03-20,39000,6,1.314,682.9,Late,8541.0
+ACC-0292,Urban Eatery,Food & Beverage,NM,2024-04-09,23000,18,1.396,464.51,Paid Off,1783.78
+ACC-0293,Highland Transport,Logistics,VA,2023-09-29,36500,9,1.303,981.98,On Track,5284.39
+ACC-0294,Granite Bakery,Food & Beverage,MI,2024-06-27,53500,9,1.292,999.86,On Track,7680.22
+ACC-0295,First Avenue Outlet,E-Commerce,WA,2024-11-09,104500,12,1.41,2526.64,On Track,12278.75
+ACC-0296,Downtown Fulfillment,E-Commerce,ME,2024-01-24,31000,12,1.266,884.05,On Track,3270.5
+ACC-0297,Crossroads Logistics Group,Logistics,CT,2023-03-17,52500,9,1.269,1233.96,On Track,7402.5
+ACC-0298,Redwood Vision Center,Healthcare,MA,2023-12-15,79500,12,1.241,1423.6,Defaulted,8221.63
+ACC-0299,Emerald Coffee Co.,Food & Beverage,CT,2023-03-31,15000,6,1.306,302.57,On Track,3265.0
+ACC-0300,Blue River Mercantile,Retail,CO,2023-11-25,97000,12,1.313,2313.99,On Track,10613.42
+ACC-0301,Mainline Physical Therapy,Healthcare,VT,2023-02-14,28500,9,1.348,644.08,On Track,4268.67
+ACC-0302,Lakeside Plumbing,Construction,SC,2024-04-13,66000,9,1.279,1137.13,Paid Off,9379.33
+ACC-0303,Oakline Outfitters,Retail,ID,2023-08-15,63000,6,1.215,1367.22,On Track,12757.5
+ACC-0304,Urban Express,Logistics,TN,2023-05-28,100000,9,1.41,2314.6,On Track,15666.67
+ACC-0305,Summit Direct,E-Commerce,AR,2023-01-13,74500,9,1.254,1416.24,On Track,10380.33
+ACC-0306,Evergreen Supply Co.,Retail,IA,2024-10-11,15000,9,1.427,362.8,Paid Off,2378.33
+ACC-0307,Golden State Pizzeria,Food & Beverage,OK,2024-09-03,35500,6,1.212,569.86,On Track,7171.0
+ACC-0308,Sapphire Storefront,E-Commerce,KS,2024-08-16,59500,6,1.318,1192.92,Defaulted,13070.17
+ACC-0309,Brookstone Grill,Food & Beverage,OR,2023-02-12,49500,12,1.311,1339.68,On Track,5407.88
+ACC-0310,Market Street Emporium,Retail,UT,2023-09-13,71500,6,1.399,1350.58,On Track,16671.42
+ACC-0311,Old Town Outlet,E-Commerce,AR,2024-12-11,85000,12,1.192,2046.6,Defaulted,8443.33
+ACC-0312,Sapphire Masonry,Construction,AK,2024-02-27,77000,18,1.423,1628.58,Late,6087.28
+ACC-0313,Golden State Dry Goods,Retail,WV,2023-04-04,49000,9,1.309,967.6,On Track,7126.78
+ACC-0314,Liberty Smokehouse,Food & Beverage,NE,2023-04-14,20000,18,1.326,574.84,Late,1473.33
+ACC-0315,Cascade Pizzeria,Food & Beverage,MT,2023-07-12,43000,6,1.303,866.4,On Track,9338.17
+ACC-0316,Lone Star Digital,E-Commerce,MS,2024-12-11,69000,6,1.161,1279.96,On Track,13351.5
+ACC-0317,Oakline Electric,Construction,MI,2023-05-04,30000,12,1.299,859.19,Late,3247.5
+ACC-0318,Downtown Contracting,Construction,OH,2024-10-22,78000,12,1.229,2042.75,Late,7988.5
+ACC-0319,Sunrise Hauling,Logistics,NH,2024-05-10,90500,12,1.253,2283.04,On Track,9449.71
+ACC-0320,Downtown Carpentry,Construction,FL,2024-11-04,59000,6,1.345,928.84,Paid Off,13225.83
+ACC-0321,Meridian Taproom,Food & Beverage,NY,2024-08-26,10000,12,1.299,169.68,On Track,1082.5
+ACC-0322,Keystone Emporium,Retail,ND,2023-08-31,27000,9,1.178,663.53,On Track,3534.0
+ACC-0323,Maple Lane Online,E-Commerce,CO,2024-08-28,155000,9,1.172,2811.93,Defaulted,20184.44
+ACC-0324,Keystone Fleet Services,Logistics,ME,2023-05-04,40500,6,1.206,744.58,On Track,8140.5
+ACC-0325,Beacon Trucking,Logistics,SC,2023-08-01,18500,18,1.207,493.71,Paid Off,1240.53
+ACC-0326,Lakeside Kitchen,Food & Beverage,NM,2023-06-04,108500,6,1.332,2092.84,Paid Off,24087.0
+ACC-0327,Ironclad Bistro,Food & Beverage,CT,2023-04-08,55500,12,1.203,892.1,Paid Off,5563.88
+ACC-0328,Granite Boutique,Retail,AZ,2023-03-07,101000,12,1.415,1570.19,On Track,11909.58
+ACC-0329,Crossroads Emporium,Retail,NJ,2023-05-17,64000,12,1.213,1385.45,Defaulted,6469.33
+ACC-0330,Cascade Fulfillment,E-Commerce,MS,2023-03-29,71000,12,1.177,1722.24,Paid Off,6963.92
+ACC-0331,Horizon Shop,E-Commerce,WI,2023-10-06,67000,18,1.413,1878.23,Paid Off,5259.5
+ACC-0332,Ironclad Family Dental,Healthcare,NE,2023-02-22,80500,6,1.239,1341.3,On Track,16623.25
+ACC-0333,Mainline Cafe,Food & Beverage,WA,2023-02-14,192500,6,1.278,3455.39,On Track,41002.5
+ACC-0334,Brookstone Plumbing,Construction,HI,2024-12-24,94000,12,1.438,2157.02,On Track,11264.33
+ACC-0335,Meridian Family Dental,Healthcare,MN,2023-03-06,23000,9,1.433,470.62,On Track,3662.11
+ACC-0336,First Avenue Masonry,Construction,CT,2023-02-24,70500,6,1.364,1567.78,On Track,16027.0
+ACC-0337,Rocky Peak Transport,Logistics,NH,2023-01-23,103000,6,1.171,2972.77,Paid Off,20102.17
+ACC-0338,New Day Bakery,Food & Beverage,GA,2023-04-07,106500,9,1.328,2467.96,Late,15714.67
+ACC-0339,Bayview Bakery,Food & Beverage,MO,2024-01-21,43500,6,1.447,923.37,On Track,10490.75
+ACC-0340,Northwind Cartage,Logistics,LA,2024-08-27,104500,6,1.434,3118.45,On Track,24975.5
+ACC-0341,Stonebridge Online,E-Commerce,GA,2024-06-21,91500,18,1.182,1462.01,Paid Off,6008.5
+ACC-0342,Lakeside Cafe,Food & Beverage,CA,2024-02-29,226500,9,1.269,6564.36,On Track,31936.5
+ACC-0343,Prairie Commerce Co.,E-Commerce,MT,2023-03-04,36500,18,1.245,822.16,Defaulted,2524.58
+ACC-0344,Oakline Online,E-Commerce,WV,2024-07-20,41500,18,1.189,936.09,On Track,2741.31
+ACC-0345,Copper Dispatch,Logistics,GA,2023-01-28,46500,6,1.358,1340.57,On Track,10524.5
+ACC-0346,Cascade Grill,Food & Beverage,MA,2024-04-06,42000,12,1.232,949.61,On Track,4312.0
+ACC-0347,Blue River Delivery Co.,Logistics,ID,2023-10-27,33500,12,1.253,722.8,Defaulted,3497.96
+ACC-0348,Prairie Cartage,Logistics,SD,2024-10-06,12000,12,1.177,229.05,On Track,1177.0
+ACC-0349,Willow Pizzeria,Food & Beverage,MA,2023-08-13,43500,6,1.299,1082.38,Paid Off,9417.75
+ACC-0350,Lone Star Dry Goods,Retail,WI,2024-04-11,67500,6,1.197,1589.27,On Track,13466.25
+ACC-0351,Cedar Grove Direct,E-Commerce,IL,2023-11-18,42000,6,1.28,765.04,On Track,8960.0
+ACC-0352,Northwind Trading Co.,Retail,CA,2024-01-17,159500,12,1.193,4089.77,Late,15856.96
+ACC-0353,Sapphire Bistro,Food & Beverage,NJ,2024-11-17,55500,18,1.436,1368.7,On Track,4427.67
+ACC-0354,Trailhead Chiropractic,Healthcare,NC,2024-06-05,112000,12,1.193,2347.52,On Track,11134.67
+ACC-0355,Market Street Hauling,Logistics,WY,2023-10-31,63500,12,1.307,956.69,On Track,6916.21
+ACC-0356,Midtown Transport,Logistics,UT,2023-11-24,86500,18,1.209,1876.94,Late,5809.92
+ACC-0357,Compass Trading Co.,Retail,VT,2024-05-30,64000,12,1.173,965.82,On Track,6256.0
+ACC-0358,Golden State Fleet Services,Logistics,NY,2023-09-10,117000,6,1.211,1886.62,On Track,23614.5
+ACC-0359,Bayview Boutique,Retail,LA,2023-05-03,56500,18,1.166,1212.44,Defaulted,3659.94
+ACC-0360,Bayview HVAC Services,Construction,MI,2023-12-08,72500,9,1.192,1176.59,Paid Off,9602.22
+ACC-0361,Market Street Logistics Group,Logistics,CT,2023-02-19,67500,6,1.298,1291.61,Late,14602.5
+ACC-0362,Silver Creek Trucking,Logistics,MI,2023-05-05,47000,12,1.346,1167.12,Late,5271.83
+ACC-0363,Emerald Kitchen,Food & Beverage,ME,2023-11-04,68500,18,1.176,1344.6,Paid Off,4475.33
+ACC-0364,Downtown Trucking,Logistics,AK,2024-08-05,188000,9,1.282,5633.37,On Track,26779.56
+ACC-0365,Blue River Apparel,Retail,HI,2024-07-25,47500,9,1.324,1365.37,On Track,6987.78
+ACC-0366,Harbor Online,E-Commerce,NE,2023-07-10,69500,6,1.22,1652.69,Paid Off,14131.67
+ACC-0367,Keystone Wellness Clinic,Healthcare,ME,2023-11-05,110000,6,1.262,3245.46,Paid Off,23136.67
+ACC-0368,Pioneer Kitchen,Food & Beverage,WY,2023-04-23,103000,6,1.172,2886.09,Defaulted,20119.33
+ACC-0369,Stonebridge Outfitters,Retail,MS,2024-07-06,55500,12,1.216,1097.98,Paid Off,5624.0
+ACC-0370,Vanguard Masonry,Construction,WV,2023-06-30,15000,18,1.29,393.66,On Track,1075.0
+ACC-0371,Lone Star Physical Therapy,Healthcare,ND,2024-08-07,73000,6,1.447,1244.83,On Track,17605.17
+ACC-0372,Harbor Fulfillment,E-Commerce,AZ,2024-09-07,16000,9,1.449,404.29,Paid Off,2576.0
+ACC-0373,Northwind Vision Center,Healthcare,HI,2024-05-18,123500,6,1.444,2762.23,On Track,29722.33
+ACC-0374,Patriot Home Health,Healthcare,OK,2023-08-30,60500,6,1.277,922.77,Late,12876.42
+ACC-0375,Bayview Freight,Logistics,NV,2024-11-27,95500,12,1.174,1825.33,Paid Off,9343.08
+ACC-0376,Lakeside Dry Goods,Retail,KS,2024-05-16,33500,12,1.247,982.58,On Track,3481.21
+ACC-0377,Cedar Grove Masonry,Construction,NE,2024-04-17,23500,12,1.221,463.83,Paid Off,2391.13
+ACC-0378,Rocky Peak Contracting,Construction,VA,2024-09-18,63500,9,1.154,1125.34,Paid Off,8142.11
+ACC-0379,First Avenue Medical Group,Healthcare,MD,2024-10-06,54000,12,1.179,961.9,Defaulted,5305.5
+ACC-0380,Crossroads Eatery,Food & Beverage,AZ,2023-02-26,42000,6,1.286,931.9,On Track,9002.0
+ACC-0381,Lakeside Mercantile,Retail,KS,2024-10-06,57500,6,1.252,1589.28,Paid Off,11998.33
+ACC-0382,Golden State Fleet Services,Logistics,WA,2024-07-13,250000,18,1.204,6592.51,On Track,16722.22
+ACC-0383,Willow Cartage,Logistics,RI,2023-05-31,87000,12,1.365,1875.09,On Track,9896.25
+ACC-0384,New Day Coffee Co.,Food & Beverage,TN,2023-08-13,98000,18,1.257,1776.83,On Track,6843.67
+ACC-0385,Trailhead Apparel,Retail,VA,2024-07-04,87500,18,1.406,1372.96,Late,6834.72
+ACC-0386,Evergreen Trading Co.,Retail,CO,2023-06-08,124000,12,1.222,2720.49,Defaulted,12627.33
+ACC-0387,Beacon Dry Goods,Retail,IA,2023-11-27,49500,18,1.312,1347.47,On Track,3608.0
+ACC-0388,Stonebridge Plumbing,Construction,AZ,2024-05-18,18000,9,1.205,467.01,Paid Off,2410.0
+ACC-0389,Willow Logistics Group,Logistics,AL,2024-04-20,49500,6,1.299,1045.89,On Track,10716.75
+ACC-0390,Copper Goods,Retail,TN,2024-10-27,86000,6,1.196,2057.17,Paid Off,17142.67
+ACC-0391,Lakeside Roofing,Construction,WA,2023-03-23,32500,6,1.198,700.17,On Track,6489.17
+ACC-0392,Pine Hollow Grill,Food & Beverage,DE,2023-08-04,50000,6,1.334,1184.26,Paid Off,11116.67
+ACC-0393,Brookstone Urgent Care,Healthcare,OR,2024-12-20,37500,9,1.229,853.6,On Track,5120.83
+ACC-0394,Hometown Online,E-Commerce,NE,2024-02-20,125500,12,1.202,3164.42,Paid Off,12570.92
+ACC-0395,Market Street Builders,Construction,AR,2023-07-01,83000,12,1.429,1877.1,On Track,9883.92
+ACC-0396,Beacon Delivery Co.,Logistics,VA,2023-07-31,78500,12,1.163,2285.07,Paid Off,7607.96
+ACC-0397,Highland Boutique,Retail,UT,2023-09-05,77500,6,1.32,1660.08,Paid Off,17050.0
+ACC-0398,Vanguard Cafe,Food & Beverage,NH,2024-02-10,54000,12,1.314,822.89,On Track,5913.0
+ACC-0399,Heritage Pizzeria,Food & Beverage,OK,2023-07-28,61500,9,1.225,1140.55,On Track,8370.83
+ACC-0400,Mainline Pizzeria,Food & Beverage,MD,2024-03-30,28500,6,1.286,641.51,Late,6108.5
+ACC-0401,Downtown Logistics Group,Logistics,SC,2023-11-22,16500,9,1.176,381.29,Paid Off,2156.0
+ACC-0402,Hometown Plumbing,Construction,MN,2024-03-22,59500,9,1.366,1385.5,On Track,9030.78
+ACC-0403,Maple Lane Eatery,Food & Beverage,WY,2023-04-24,65500,9,1.217,1684.55,On Track,8857.06
+ACC-0404,Stonebridge Dispatch,Logistics,AR,2024-03-31,107000,12,1.208,2045.81,On Track,10771.33
+ACC-0405,Northwind Wellness Clinic,Healthcare,FL,2024-11-06,130500,12,1.244,3259.05,Paid Off,13528.5
+ACC-0406,Meridian Digital,E-Commerce,WI,2023-04-09,130500,12,1.421,3335.64,Paid Off,15453.38
+ACC-0407,Liberty Pediatrics,Healthcare,IA,2023-08-28,32000,6,1.389,677.41,On Track,7408.0
+ACC-0408,Evergreen Outfitters,Retail,KS,2024-05-21,45500,12,1.434,956.98,Paid Off,5437.25
+ACC-0409,Horizon Dispatch,Logistics,SC,2024-03-27,71500,12,1.346,1264.4,Paid Off,8019.92
+ACC-0410,Maple Lane Apparel,Retail,GA,2024-05-08,221500,6,1.349,4697.97,Late,49800.58
+ACC-0411,Cascade Kitchen,Food & Beverage,MT,2024-02-14,124000,12,1.294,3323.48,On Track,13371.33
+ACC-0412,Keystone Kitchen,Food & Beverage,IA,2024-05-13,102000,9,1.422,2920.73,On Track,16116.0
+ACC-0413,Willow Smokehouse,Food & Beverage,GA,2024-03-21,44500,9,1.303,1063.74,On Track,6442.61
+ACC-0414,Granite Supply Co.,Retail,WI,2023-02-24,34000,6,1.257,662.68,On Track,7123.0
+ACC-0415,Highland Outfitters,Retail,GA,2024-07-03,85000,12,1.342,2144.92,On Track,9505.83
+ACC-0416,Granite Excavation,Construction,CA,2023-11-23,30000,6,1.314,783.07,On Track,6570.0
+ACC-0417,Harbor Express,Logistics,ND,2023-02-07,48000,6,1.187,959.19,On Track,9496.0
+ACC-0418,Prairie Supply Co.,Retail,UT,2023-10-27,51500,6,1.268,1411.01,Paid Off,10883.67
+ACC-0419,Oakline Coffee Co.,Food & Beverage,CT,2023-11-15,132000,18,1.244,2125.92,On Track,9122.67
+ACC-0420,Silver Creek Direct,E-Commerce,OK,2023-03-05,45500,9,1.404,689.84,Paid Off,7098.0
+ACC-0421,Beacon Freight,Logistics,NV,2024-12-29,14500,9,1.264,244.25,On Track,2036.44
+ACC-0422,Rocky Peak Electric,Construction,TN,2023-06-12,72500,9,1.396,1257.16,Paid Off,11245.56
+ACC-0423,Maple Lane Roofing,Construction,CT,2023-08-30,37500,18,1.283,1056.9,On Track,2672.92
+ACC-0424,Urban DTC,E-Commerce,WI,2023-11-19,56500,12,1.376,1207.67,Late,6478.67
+ACC-0425,New Day Home Health,Healthcare,NM,2024-08-31,52500,18,1.191,1004.01,Late,3473.75
+ACC-0426,Silver Creek Kitchen,Food & Beverage,TX,2024-06-27,47500,9,1.427,1018.22,On Track,7531.39
+ACC-0427,Ironclad Dispatch,Logistics,ME,2024-07-17,85000,6,1.294,1778.42,Paid Off,18331.67
+ACC-0428,Stonebridge Roofing,Construction,WV,2023-06-23,23500,12,1.228,458.77,On Track,2404.83
+ACC-0429,Mainline Dry Goods,Retail,NY,2024-09-10,41500,9,1.222,708.34,Paid Off,5634.78
+ACC-0430,Hometown Roofing,Construction,CT,2024-08-29,80000,12,1.23,1987.1,On Track,8200.0
+ACC-0431,Emerald Goods,Retail,WA,2023-12-06,39000,18,1.26,664.91,On Track,2730.0
+ACC-0432,Silver Creek Electric,Construction,SC,2024-02-03,22500,9,1.365,599.21,On Track,3412.5
+ACC-0433,Cedar Grove Plumbing,Construction,KS,2023-01-28,79500,18,1.435,1433.01,Late,6337.92
+ACC-0434,Compass Goods,Retail,NV,2024-07-09,102000,12,1.351,2649.0,On Track,11483.5
+ACC-0435,Cedar Grove Medical Group,Healthcare,MD,2024-12-03,53500,9,1.314,1448.98,Paid Off,7811.0
+ACC-0436,Meridian Supply Co.,Retail,NV,2023-12-12,18500,9,1.285,312.28,On Track,2641.39
+ACC-0437,Cascade Storefront,E-Commerce,WI,2024-01-31,81000,6,1.398,1320.4,On Track,18873.0
+ACC-0438,Vanguard Fleet Services,Logistics,VT,2023-12-31,22000,12,1.405,643.36,On Track,2575.83
+ACC-0439,Stonebridge Emporium,Retail,HI,2023-03-02,65000,6,1.238,1426.47,Defaulted,13411.67
+ACC-0440,Keystone Vision Center,Healthcare,WI,2024-03-29,34000,9,1.436,831.42,Late,5424.89
+ACC-0441,Old Town Freight,Logistics,MI,2024-06-11,29000,12,1.269,445.12,On Track,3066.75
+ACC-0442,Blue River Pizzeria,Food & Beverage,OK,2024-11-09,43000,6,1.39,824.77,Paid Off,9961.67
+ACC-0443,Urban Supply Co.,Retail,RI,2024-11-10,49500,6,1.44,1117.76,On Track,11880.0
+ACC-0444,Sunrise Chiropractic,Healthcare,MO,2023-12-26,38500,12,1.361,1089.29,On Track,4366.54
+ACC-0445,Keystone Online,E-Commerce,MN,2024-12-02,76000,6,1.198,1449.44,On Track,15174.67
+ACC-0446,Meridian Commerce Co.,E-Commerce,MN,2024-01-22,43000,9,1.326,1145.0,On Track,6335.33
+ACC-0447,Heritage Bakery,Food & Beverage,UT,2024-04-14,94500,9,1.186,2356.19,On Track,12453.0
+ACC-0448,Oakline Hauling,Logistics,MD,2024-03-16,64000,9,1.387,1070.66,Paid Off,9863.11
+ACC-0449,Lone Star Digital,E-Commerce,IN,2024-12-31,37500,6,1.234,727.52,On Track,7712.5
+ACC-0450,Urban Smokehouse,Food & Beverage,ME,2024-06-23,34000,12,1.359,631.31,Late,3850.5
+ACC-0451,Cascade Trucking,Logistics,GA,2023-03-29,22000,18,1.423,476.03,Paid Off,1739.22
+ACC-0452,Patriot Trucking,Logistics,MD,2023-02-22,64500,6,1.204,1582.19,Late,12943.0
+ACC-0453,Trailhead Home Health,Healthcare,CO,2023-10-27,45500,18,1.268,978.31,Paid Off,3205.22
+ACC-0454,Crossroads Apparel,Retail,CA,2024-01-12,15000,12,1.344,280.02,Late,1680.0
+ACC-0455,Golden State Direct,E-Commerce,OR,2024-05-03,41000,12,1.276,1042.97,On Track,4359.67
+ACC-0456,Urban Marketplace,E-Commerce,AR,2023-12-19,33500,12,1.202,796.2,On Track,3355.58
+ACC-0457,Market Street Market,Retail,NH,2024-01-12,131000,12,1.159,2985.45,On Track,12652.42
+ACC-0458,Heritage Commerce Co.,E-Commerce,RI,2024-11-04,21500,12,1.272,501.3,Defaulted,2279.0
+ACC-0459,Heritage Delivery Co.,Logistics,OR,2023-09-02,25000,9,1.345,458.21,On Track,3736.11
+ACC-0460,Prairie Supply Co.,Retail,MN,2023-12-27,101500,12,1.322,2558.46,Paid Off,11181.92
+ACC-0461,Harbor Remodeling,Construction,GA,2024-02-12,116000,9,1.197,2414.25,Late,15428.0
+ACC-0462,Heritage Market,Retail,WA,2023-12-09,36500,6,1.285,746.5,On Track,7817.08
+ACC-0463,Cedar Grove Remodeling,Construction,TN,2024-12-08,39000,12,1.261,672.59,Late,4098.25
+ACC-0464,Old Town Vision Center,Healthcare,NM,2024-12-04,77000,6,1.232,1844.35,On Track,15810.67
+ACC-0465,Rocky Peak Outfitters,Retail,CA,2024-01-11,15500,9,1.369,372.62,On Track,2357.72
+ACC-0466,Meridian Fleet Services,Logistics,AK,2023-11-26,20000,6,1.243,402.09,Paid Off,4143.33
+ACC-0467,Patriot Dry Goods,Retail,KS,2024-03-06,47000,6,1.312,1311.19,On Track,10277.33
+ACC-0468,Market Street Storefront,E-Commerce,DE,2023-05-13,129000,12,1.427,3570.96,On Track,15340.25
+ACC-0469,Pine Hollow Kitchen,Food & Beverage,UT,2023-11-08,43500,12,1.312,723.66,On Track,4756.0
+ACC-0470,Summit Transport,Logistics,HI,2023-06-08,58000,9,1.335,1474.68,On Track,8603.33
+ACC-0471,Sunrise Remodeling,Construction,IA,2023-04-16,102500,6,1.172,2143.02,Late,20021.67
+ACC-0472,Rocky Peak Builders,Construction,WI,2023-03-11,175000,9,1.203,5249.25,Late,23391.67
+ACC-0473,Redwood Dermatology,Healthcare,SD,2024-03-05,40000,9,1.18,735.01,On Track,5244.44
+ACC-0474,Crossroads Urgent Care,Healthcare,HI,2023-01-01,54500,12,1.379,1046.83,On Track,6262.96
+ACC-0475,Pioneer Storefront,E-Commerce,MD,2024-04-17,150000,12,1.401,3244.74,On Track,17512.5
+ACC-0476,Keystone Excavation,Construction,MT,2023-11-12,24000,9,1.206,456.74,Late,3216.0
+ACC-0477,Brookstone Delivery Co.,Logistics,ND,2023-09-25,97000,9,1.216,2461.85,Paid Off,13105.78
+ACC-0478,Brookstone Trading Co.,Retail,WA,2024-07-16,31500,18,1.247,699.73,On Track,2182.25
+ACC-0479,Urban DTC,E-Commerce,UT,2024-01-29,58000,12,1.327,1062.16,On Track,6413.83
+ACC-0480,Granite Supply Co.,Retail,WI,2024-06-20,48000,9,1.337,1084.59,Defaulted,7130.67
+ACC-0481,Highland Grill,Food & Beverage,AZ,2024-06-02,32500,9,1.356,920.78,Late,4896.67
+ACC-0482,Summit Masonry,Construction,ID,2023-01-24,32000,6,1.422,860.35,On Track,7584.0
+ACC-0483,Granite Smokehouse,Food & Beverage,NH,2023-06-07,64000,18,1.239,1438.88,Late,4405.33
+ACC-0484,Pine Hollow HVAC Services,Construction,AZ,2024-02-21,95000,9,1.348,1836.1,On Track,14228.89
+ACC-0485,Evergreen Wellness Clinic,Healthcare,LA,2024-12-14,51000,9,1.318,902.61,On Track,7468.67
+ACC-0486,Midtown Bakery,Food & Beverage,DE,2023-04-23,57000,18,1.242,1606.02,Late,3933.0
+ACC-0487,Coastal Urgent Care,Healthcare,WA,2023-03-19,75500,12,1.422,1936.76,On Track,8946.75
+ACC-0488,Meridian Digital,E-Commerce,AR,2024-11-18,32000,6,1.179,754.64,On Track,6288.0
+ACC-0489,Midtown Contracting,Construction,DE,2024-12-07,82500,6,1.364,2325.8,Defaulted,18755.0
+ACC-0490,Downtown DTC,E-Commerce,GA,2023-05-03,86500,6,1.368,1455.39,Late,19722.0
+ACC-0491,Ironclad Delivery Co.,Logistics,DE,2023-10-21,230500,12,1.425,5817.21,On Track,27371.88
+ACC-0492,Blue River Fleet Services,Logistics,NH,2024-04-03,44500,6,1.306,812.16,Paid Off,9686.17
+ACC-0493,Beacon Roofing,Construction,ME,2023-05-23,43000,18,1.246,722.77,Late,2976.56
+ACC-0494,Silver Creek Online,E-Commerce,VA,2023-08-27,84000,18,1.398,1846.67,Paid Off,6524.0
+ACC-0495,Lone Star Pizzeria,Food & Beverage,IN,2023-10-16,86500,12,1.381,1800.14,Defaulted,9954.71
+ACC-0496,Sapphire Home Health,Healthcare,NE,2024-04-13,41000,12,1.3,1193.82,Paid Off,4441.67
+ACC-0497,Urban Mercantile,Retail,ND,2023-08-14,44000,9,1.38,873.83,On Track,6746.67
+ACC-0498,Lone Star Physical Therapy,Healthcare,NY,2023-10-29,74000,6,1.23,2014.54,On Track,15170.0
+ACC-0499,New Day Trucking,Logistics,SC,2023-07-31,35000,12,1.327,918.13,Late,3870.42
+ACC-0500,Lone Star Vision Center,Healthcare,HI,2024-07-09,44000,6,1.41,1100.83,Defaulted,10340.0
+ACC-0501,Ironclad Emporium,Retail,MT,2023-04-22,58000,6,1.245,1670.75,On Track,12035.0
+ACC-0502,Rocky Peak Direct,E-Commerce,SD,2023-06-18,95000,9,1.295,2006.29,On Track,13669.44
+ACC-0503,Maple Lane Freight,Logistics,UT,2023-07-02,39500,6,1.435,823.38,Late,9447.08
+ACC-0504,Summit Cartage,Logistics,NM,2024-10-24,20000,9,1.389,348.28,On Track,3086.67
+ACC-0505,Harbor Smokehouse,Food & Beverage,NC,2024-11-21,19000,12,1.416,363.59,On Track,2242.0
+ACC-0506,Golden State Pediatrics,Healthcare,UT,2024-01-01,27500,12,1.266,775.41,Late,2901.25
+ACC-0507,Liberty Marketplace,E-Commerce,NY,2023-04-25,26500,12,1.449,586.07,Late,3199.88
+ACC-0508,First Avenue Cafe,Food & Beverage,WV,2024-07-06,50500,12,1.196,1016.08,Late,5033.17
+ACC-0509,Northwind Bistro,Food & Beverage,CT,2023-12-26,28500,9,1.306,519.89,Paid Off,4135.67
+ACC-0510,Maple Lane Bistro,Food & Beverage,LA,2024-09-13,37500,12,1.294,835.29,On Track,4043.75
+ACC-0511,Downtown Logistics Group,Logistics,CO,2023-09-21,36000,12,1.39,927.0,Defaulted,4170.0
+ACC-0512,Downtown Excavation,Construction,CA,2024-12-31,43000,9,1.423,829.92,On Track,6798.78
+ACC-0513,Meridian Fleet Services,Logistics,MS,2024-08-12,114000,18,1.369,3005.7,On Track,8670.33
+ACC-0514,Copper Carpentry,Construction,ID,2023-06-13,79000,9,1.338,1931.3,Late,11744.67
+ACC-0515,Emerald Fleet Services,Logistics,MA,2024-06-14,55500,6,1.278,1488.15,Paid Off,11821.5
+ACC-0516,Urban Apparel,Retail,MI,2023-07-29,42500,9,1.303,797.45,Late,6153.06
+ACC-0517,Sapphire Freight,Logistics,NY,2023-09-13,43500,9,1.303,1064.25,On Track,6297.83
+ACC-0518,Prairie Outfitters,Retail,WV,2023-07-03,66000,9,1.156,1142.2,Defaulted,8477.33
+ACC-0519,Old Town Urgent Care,Healthcare,TX,2024-05-13,76000,12,1.301,1554.73,Paid Off,8239.67
+ACC-0520,Northwind Fulfillment,E-Commerce,ME,2023-07-12,33500,18,1.407,866.49,Paid Off,2618.58
+ACC-0521,Sunrise Family Dental,Healthcare,KY,2024-04-11,56000,9,1.363,1370.6,Defaulted,8480.89
+ACC-0522,Pioneer Dry Goods,Retail,RI,2024-03-01,18000,12,1.389,320.72,On Track,2083.5
+ACC-0523,Compass Coffee Co.,Food & Beverage,CT,2024-07-02,62000,9,1.267,1728.26,Paid Off,8728.22
+ACC-0524,Prairie Electric,Construction,NV,2024-12-27,83500,12,1.309,1319.32,Paid Off,9108.46
+ACC-0525,Cedar Grove Cafe,Food & Beverage,MI,2023-01-07,47000,6,1.16,1124.63,Late,9086.67
+ACC-0526,Harbor Bistro,Food & Beverage,GA,2024-12-24,149500,6,1.265,4448.72,Late,31519.58
+ACC-0527,Rocky Peak Trucking,Logistics,NM,2023-03-21,34000,12,1.292,781.07,Paid Off,3660.67
+ACC-0528,Copper Dry Goods,Retail,KY,2024-01-21,62000,12,1.227,1674.62,On Track,6339.5
+ACC-0529,Coastal Dispatch,Logistics,GA,2023-09-07,54000,12,1.159,1292.1,On Track,5215.5
+ACC-0530,Cedar Grove Logistics Group,Logistics,NC,2024-04-12,52000,12,1.357,1390.81,Defaulted,5880.33
+ACC-0531,Beacon Direct,E-Commerce,FL,2024-06-11,51500,12,1.281,1278.95,Defaulted,5497.62
+ACC-0532,Mainline Trading Co.,Retail,ND,2024-09-20,58500,9,1.275,1483.97,Defaulted,8287.5
+ACC-0533,Hometown Emporium,Retail,FL,2023-10-21,87500,6,1.225,1611.5,On Track,17864.58
+ACC-0534,Copper Pizzeria,Food & Beverage,MI,2024-11-12,117500,6,1.311,3069.96,On Track,25673.75
+ACC-0535,Blue River Storefront,E-Commerce,SD,2023-08-24,55000,6,1.281,1021.28,Late,11742.5
+ACC-0536,Ironclad Mercantile,Retail,ID,2023-05-30,86000,9,1.292,2555.03,Late,12345.78
+ACC-0537,Emerald Dermatology,Healthcare,RI,2023-10-05,37500,9,1.324,690.63,On Track,5516.67
+ACC-0538,Prairie Outfitters,Retail,OR,2024-01-22,84000,9,1.152,1558.22,Paid Off,10752.0
+ACC-0539,Northwind Commerce Co.,E-Commerce,VA,2024-05-03,36000,12,1.422,1003.68,On Track,4266.0
+ACC-0540,Beacon Outfitters,Retail,FL,2024-08-31,100000,9,1.171,1864.48,On Track,13011.11
+ACC-0541,Highland Roofing,Construction,OK,2023-06-14,185500,12,1.285,3786.71,On Track,19863.96
+ACC-0542,Oakline Dry Goods,Retail,WA,2023-08-10,51500,12,1.212,1324.56,On Track,5201.5
+ACC-0543,Emerald Cafe,Food & Beverage,RI,2024-11-17,16500,9,1.307,286.79,On Track,2396.17
+ACC-0544,Heritage Grill,Food & Beverage,GA,2023-11-18,40500,9,1.234,704.14,Defaulted,5553.0
+ACC-0545,Evergreen HVAC Services,Construction,TN,2023-06-26,108500,12,1.408,2419.05,Paid Off,12730.67
+ACC-0546,Silver Creek Mercantile,Retail,CO,2024-12-21,74500,12,1.269,1389.83,Defaulted,7878.38
+ACC-0547,Market Street Medical Group,Healthcare,NJ,2023-11-25,63000,9,1.342,1167.7,On Track,9394.0
+ACC-0548,Maple Lane Commerce Co.,E-Commerce,MO,2024-12-21,96000,9,1.225,1453.3,On Track,13066.67
+ACC-0549,Granite Commerce Co.,E-Commerce,NE,2024-11-03,72000,12,1.156,1480.09,On Track,6936.0
+ACC-0550,Compass Plumbing,Construction,MT,2024-10-24,107500,12,1.271,2125.68,Paid Off,11386.04
+ACC-0551,Cedar Grove Electric,Construction,AK,2024-03-01,91000,6,1.311,1407.53,On Track,19883.5
+ACC-0552,Vanguard Physical Therapy,Healthcare,MT,2024-08-06,127000,9,1.288,3088.45,Paid Off,18175.11
+ACC-0553,Midtown Roofing,Construction,WA,2024-12-03,67000,18,1.439,1634.79,Late,5356.28
+ACC-0554,Lakeside Cafe,Food & Beverage,MI,2023-07-16,90500,6,1.362,1453.61,Late,20543.5
+ACC-0555,Blue River Fleet Services,Logistics,IN,2023-01-28,46500,18,1.449,918.64,On Track,3743.25
+ACC-0556,Evergreen Commerce Co.,E-Commerce,WY,2023-08-23,39500,6,1.239,1109.64,On Track,8156.75
+ACC-0557,Summit Remodeling,Construction,CA,2024-04-10,140500,12,1.387,3334.42,On Track,16239.46
+ACC-0558,Midtown Dispatch,Logistics,MO,2024-02-05,62000,9,1.317,1313.14,On Track,9072.67
+ACC-0559,Lakeside HVAC Services,Construction,MT,2023-02-28,85500,6,1.334,1878.99,Paid Off,19009.5
+ACC-0560,Rocky Peak Dispatch,Logistics,MS,2024-02-14,59000,18,1.446,1069.33,On Track,4739.67
+ACC-0561,Highland Fulfillment,E-Commerce,WA,2023-05-08,40000,9,1.346,1087.13,Paid Off,5982.22
+ACC-0562,Hometown Emporium,Retail,MI,2024-01-05,55500,18,1.42,1593.41,On Track,4378.33
+ACC-0563,Coastal Wellness Clinic,Healthcare,WI,2024-02-25,121000,9,1.368,3467.86,Defaulted,18392.0
+ACC-0564,Urban Cafe,Food & Beverage,AR,2024-04-10,74500,18,1.188,1367.75,Defaulted,4917.0
+ACC-0565,Silver Creek Fleet Services,Logistics,OR,2023-10-29,21500,18,1.36,422.71,On Track,1624.44
+ACC-0566,Harbor Grill,Food & Beverage,NJ,2023-10-26,49000,12,1.295,853.06,Late,5287.92
+ACC-0567,Hometown Smokehouse,Food & Beverage,IL,2024-05-11,146500,9,1.426,2872.57,On Track,23212.11
+ACC-0568,Stonebridge Cafe,Food & Beverage,ID,2024-07-01,49000,12,1.392,979.61,Paid Off,5684.0
+ACC-0569,Coastal Fulfillment,E-Commerce,OK,2024-08-13,20500,12,1.181,502.18,Late,2017.54
+ACC-0570,Old Town Direct,E-Commerce,NY,2023-09-01,156000,18,1.19,2783.77,Late,10313.33
+ACC-0571,Oakline Transport,Logistics,NM,2023-11-06,80000,9,1.171,2303.28,Late,10408.89
+ACC-0572,Market Street Family Dental,Healthcare,AZ,2023-08-30,53000,9,1.298,876.96,On Track,7643.78
+ACC-0573,Highland Cafe,Food & Beverage,NJ,2024-01-21,45000,6,1.174,679.64,Late,8805.0
+ACC-0574,Stonebridge Apparel,Retail,WY,2023-04-04,99500,12,1.367,2768.51,Paid Off,11334.71
+ACC-0575,Summit Trading Co.,Retail,AL,2023-11-11,41000,18,1.316,1047.82,On Track,2997.56
+ACC-0576,Trailhead Pediatrics,Healthcare,MS,2023-05-18,103500,6,1.401,2104.2,On Track,24167.25
+ACC-0577,Evergreen Cartage,Logistics,MO,2024-01-25,74000,12,1.234,1771.0,Late,7609.67
+ACC-0578,New Day Marketplace,E-Commerce,VT,2024-09-13,63000,18,1.306,1156.25,Paid Off,4571.0
+ACC-0579,Cedar Grove Dispatch,Logistics,IA,2024-12-21,59500,6,1.185,1042.79,On Track,11751.25
+ACC-0580,Liberty Outfitters,Retail,MS,2023-11-23,50000,6,1.415,1103.36,Defaulted,11791.67
+ACC-0581,Hometown Apparel,Retail,OK,2023-02-11,98000,12,1.203,1989.19,Paid Off,9824.5
+ACC-0582,Stonebridge Express,Logistics,AR,2023-06-16,34000,12,1.181,823.77,On Track,3346.17
+ACC-0583,Pioneer Market,Retail,SD,2023-03-18,22500,6,1.212,411.13,On Track,4545.0
+ACC-0584,Coastal Emporium,Retail,TN,2024-07-09,77000,12,1.392,1920.68,Paid Off,8932.0
+ACC-0585,Hometown Wellness Clinic,Healthcare,OK,2024-12-20,78000,12,1.182,2067.23,Late,7683.0
+ACC-0586,Hometown Fleet Services,Logistics,NC,2024-02-09,71500,18,1.334,1251.22,Paid Off,5298.94
+ACC-0587,Patriot Plumbing,Construction,PA,2023-05-10,69000,18,1.374,1080.39,On Track,5267.0
+ACC-0588,Willow Boutique,Retail,SC,2023-01-16,46000,12,1.375,993.32,Paid Off,5270.83
+ACC-0589,Keystone Delivery Co.,Logistics,VA,2024-12-14,85000,12,1.207,2261.88,Paid Off,8549.58
+ACC-0590,Ironclad Logistics Group,Logistics,MI,2023-08-20,53500,9,1.168,1324.75,Late,6943.11
+ACC-0591,Heritage Masonry,Construction,MN,2023-03-23,42000,12,1.285,1072.19,On Track,4497.5
+ACC-0592,Ironclad Logistics Group,Logistics,NY,2023-05-10,46500,6,1.211,978.48,Late,9385.25
+ACC-0593,Brookstone Pizzeria,Food & Beverage,GA,2023-07-06,167000,12,1.36,3093.54,On Track,18926.67
+ACC-0594,Hometown Transport,Logistics,TX,2024-04-24,21000,6,1.257,482.51,On Track,4399.5
+ACC-0595,Redwood Smokehouse,Food & Beverage,RI,2024-10-13,72500,12,1.285,1309.75,Paid Off,7763.54
+ACC-0596,Cedar Grove HVAC Services,Construction,NY,2023-07-21,22000,6,1.184,569.66,Paid Off,4341.33
+ACC-0597,Lakeside DTC,E-Commerce,KS,2024-05-17,52000,9,1.32,933.63,On Track,7626.67
+ACC-0598,Compass Builders,Construction,LA,2023-02-17,43500,9,1.206,842.55,Late,5829.0
+ACC-0599,Willow Outlet,E-Commerce,MI,2023-01-08,17500,12,1.354,395.47,On Track,1974.58
+ACC-0600,Lakeside Direct,E-Commerce,ND,2023-02-10,68000,12,1.171,1516.44,On Track,6635.67
+ACC-0601,Market Street Online,E-Commerce,RI,2024-11-05,44500,6,1.443,1068.57,On Track,10702.25
+ACC-0602,Highland HVAC Services,Construction,ND,2024-03-01,17500,18,1.355,377.33,On Track,1317.36
+ACC-0603,Horizon Contracting,Construction,WA,2024-08-11,87500,18,1.205,2519.31,Paid Off,5857.64
+ACC-0604,Sunrise Outfitters,Retail,WI,2023-01-16,121000,9,1.154,3339.48,Late,15514.89
+ACC-0605,Horizon Masonry,Construction,OK,2023-01-17,125000,12,1.25,3523.34,Paid Off,13020.83
+ACC-0606,Bayview Shop,E-Commerce,ME,2024-09-12,67000,9,1.196,1637.66,On Track,8903.56
+ACC-0607,Stonebridge Smokehouse,Food & Beverage,NJ,2023-03-17,56500,6,1.216,1385.67,On Track,11450.67
+ACC-0608,Heritage Shop,E-Commerce,MI,2023-04-24,114000,12,1.412,2751.73,On Track,13414.0
+ACC-0609,Prairie Logistics Group,Logistics,NY,2024-01-15,138500,6,1.331,2980.97,Paid Off,30723.92
+ACC-0610,Vanguard Cartage,Logistics,SD,2024-03-19,102500,18,1.203,2032.74,On Track,6850.42
+ACC-0611,Downtown Hauling,Logistics,ME,2023-06-17,33000,18,1.317,788.04,On Track,2414.5
+ACC-0612,Heritage Vision Center,Healthcare,MT,2023-11-22,61500,12,1.227,946.05,Late,6288.38
+ACC-0613,Evergreen HVAC Services,Construction,AZ,2024-05-08,70000,12,1.443,1057.83,Paid Off,8417.5
+ACC-0614,Emerald Dermatology,Healthcare,OR,2023-11-20,20500,12,1.16,569.38,On Track,1981.67
+ACC-0615,Cedar Grove Plumbing,Construction,MO,2023-10-07,71000,18,1.37,1114.44,On Track,5403.89
+ACC-0616,Willow Digital,E-Commerce,MN,2023-02-22,192000,9,1.382,4391.41,Paid Off,29482.67
+ACC-0617,Harbor Coffee Co.,Food & Beverage,NE,2023-11-27,78000,6,1.17,1889.54,On Track,15210.0
+ACC-0618,Crossroads Eatery,Food & Beverage,HI,2024-08-09,123500,12,1.202,2219.61,On Track,12370.58
+ACC-0619,Sapphire Boutique,Retail,NJ,2024-04-03,61000,9,1.265,1734.59,Late,8573.89
+ACC-0620,Crossroads Emporium,Retail,PA,2024-10-14,53000,9,1.41,946.13,On Track,8303.33
+ACC-0621,Lakeside Home Health,Healthcare,LA,2023-04-03,68000,6,1.311,1922.21,On Track,14858.0
+ACC-0622,Compass Medical Group,Healthcare,CT,2023-01-09,35000,12,1.347,925.57,On Track,3928.75
+ACC-0623,Cascade Apparel,Retail,MD,2024-02-05,32500,9,1.385,604.86,On Track,5001.39
+ACC-0624,Rocky Peak Vision Center,Healthcare,GA,2023-05-11,110500,6,1.398,1907.36,On Track,25746.5
+ACC-0625,Compass DTC,E-Commerce,ME,2024-03-10,117000,6,1.293,2309.99,On Track,25213.5
+ACC-0626,Oakline Bakery,Food & Beverage,NY,2024-10-22,32000,9,1.303,671.02,Paid Off,4632.89
+ACC-0627,Coastal Dermatology,Healthcare,CO,2023-09-04,93500,18,1.365,1747.21,On Track,7090.42
+ACC-0628,Vanguard Urgent Care,Healthcare,PA,2024-02-06,52500,9,1.229,1574.13,Late,7169.17
+ACC-0629,Beacon Storefront,E-Commerce,ID,2024-05-13,66500,12,1.406,1226.58,Defaulted,7791.58
+ACC-0630,Highland Chiropractic,Healthcare,VT,2023-04-20,71000,12,1.156,1949.63,On Track,6839.67
+ACC-0631,First Avenue Electric,Construction,OR,2024-10-17,95000,9,1.209,1651.74,On Track,12761.67
+ACC-0632,Stonebridge Pizzeria,Food & Beverage,IN,2023-05-29,57500,12,1.39,1707.96,Late,6660.42
+ACC-0633,Sapphire Vision Center,Healthcare,NH,2024-08-13,119500,12,1.252,2196.75,Defaulted,12467.83
+ACC-0634,Beacon Dermatology,Healthcare,CO,2024-04-27,65000,12,1.195,1386.15,Late,6472.92
+ACC-0635,Midtown Grill,Food & Beverage,CA,2023-04-14,77500,6,1.206,1811.83,On Track,15577.5
+ACC-0636,Silver Creek Masonry,Construction,WV,2024-06-13,35000,6,1.309,588.15,On Track,7635.83
+ACC-0637,Prairie Bakery,Food & Beverage,SD,2023-05-24,180500,18,1.404,4919.04,On Track,14079.0
+ACC-0638,Patriot Grill,Food & Beverage,DE,2024-03-14,71000,12,1.171,1357.54,Late,6928.42
+ACC-0639,Lone Star HVAC Services,Construction,IA,2024-12-02,81500,18,1.159,1893.98,Paid Off,5247.69
+ACC-0640,Golden State Trucking,Logistics,GA,2024-11-27,22500,18,1.29,523.0,On Track,1612.5
+ACC-0641,Hometown Builders,Construction,MD,2024-09-28,35000,6,1.437,841.39,Paid Off,8382.5
+ACC-0642,Midtown Hauling,Logistics,IA,2023-12-28,108500,12,1.234,1717.8,On Track,11157.42
+ACC-0643,Maple Lane Hauling,Logistics,KY,2024-02-14,64500,9,1.438,1130.64,Paid Off,10305.67
+ACC-0644,Beacon Pediatrics,Healthcare,NE,2023-08-08,19000,12,1.416,330.94,On Track,2242.0
+ACC-0645,Downtown Builders,Construction,GA,2024-11-04,97500,6,1.235,1904.25,Paid Off,20068.75
+ACC-0646,First Avenue Bakery,Food & Beverage,VT,2023-12-15,41000,9,1.395,704.12,Paid Off,6355.0
+ACC-0647,Pioneer Wellness Clinic,Healthcare,OR,2024-07-18,119500,12,1.356,3445.04,Paid Off,13503.5
+ACC-0648,Oakline Storefront,E-Commerce,RI,2023-09-20,52500,12,1.304,1191.45,On Track,5705.0
+ACC-0649,Keystone Express,Logistics,FL,2024-06-25,61500,12,1.277,1497.75,Late,6544.62
+ACC-0650,Compass Transport,Logistics,OK,2023-06-14,105000,9,1.395,2138.04,Paid Off,16275.0
+ACC-0651,Trailhead Pediatrics,Healthcare,TN,2024-06-20,33500,9,1.388,641.31,On Track,5166.44
+ACC-0652,Oakline Digital,E-Commerce,FL,2023-02-03,32000,18,1.377,721.53,On Track,2448.0
+ACC-0653,Market Street Bistro,Food & Beverage,PA,2023-03-18,49500,9,1.449,961.03,Paid Off,7969.5
+ACC-0654,Meridian Contracting,Construction,LA,2023-09-15,86500,9,1.294,1743.38,On Track,12436.78
+ACC-0655,Lakeside Direct,E-Commerce,SC,2023-12-19,26500,12,1.392,577.47,On Track,3074.0
+ACC-0656,Lakeside DTC,E-Commerce,MS,2024-06-04,22000,9,1.409,496.89,On Track,3444.22
+ACC-0657,Trailhead Carpentry,Construction,SD,2023-09-20,86500,12,1.213,2574.65,On Track,8743.71
+ACC-0658,Compass Direct,E-Commerce,DE,2023-01-14,39500,9,1.163,724.82,On Track,5104.28
+ACC-0659,New Day Supply Co.,Retail,MD,2023-08-26,44500,12,1.271,993.22,Paid Off,4713.29
+ACC-0660,Willow Pizzeria,Food & Beverage,IN,2023-11-18,20000,18,1.407,344.85,On Track,1563.33
+ACC-0661,Meridian Smokehouse,Food & Beverage,IL,2024-02-02,38000,18,1.237,769.5,Paid Off,2611.44
+ACC-0662,Sapphire Masonry,Construction,KS,2024-04-15,55000,12,1.36,1416.78,On Track,6233.33
+ACC-0663,Compass Mercantile,Retail,MD,2023-07-01,91500,9,1.152,1611.95,On Track,11712.0
+ACC-0664,Downtown Coffee Co.,Food & Beverage,CT,2024-03-22,36000,12,1.257,853.93,On Track,3771.0
+ACC-0665,Evergreen Shop,E-Commerce,OK,2024-04-06,137000,12,1.335,2911.32,Late,15241.25
+ACC-0666,Vanguard Carpentry,Construction,NV,2024-07-21,37500,12,1.189,591.51,Defaulted,3715.62
+ACC-0667,Pine Hollow Shop,E-Commerce,TN,2024-01-17,38000,12,1.419,1101.85,On Track,4493.5
+ACC-0668,Rocky Peak Hauling,Logistics,OK,2024-08-15,128000,12,1.197,2714.12,On Track,12768.0
+ACC-0669,Willow Freight,Logistics,DE,2023-06-11,62000,12,1.423,1659.05,On Track,7352.17
+ACC-0670,Cedar Grove Emporium,Retail,AR,2024-06-04,40500,12,1.215,860.41,On Track,4100.62
+ACC-0671,Vanguard Express,Logistics,MI,2023-02-03,50500,9,1.448,1467.55,Late,8124.89
+ACC-0672,New Day DTC,E-Commerce,MO,2023-03-17,116000,9,1.331,2245.42,On Track,17155.11
+ACC-0673,Coastal Marketplace,E-Commerce,IL,2024-09-24,123000,12,1.175,2605.57,Defaulted,12043.75
+ACC-0674,Oakline Apparel,Retail,SC,2023-12-14,35000,6,1.17,923.4,Paid Off,6825.0
+ACC-0675,Mainline Commerce Co.,E-Commerce,NJ,2024-03-29,53500,18,1.172,1078.29,On Track,3483.44
+ACC-0676,Midtown Plumbing,Construction,PA,2024-03-17,58000,12,1.327,1186.99,Late,6413.83
+ACC-0677,Mainline Fulfillment,E-Commerce,CO,2024-05-22,32000,6,1.393,957.52,On Track,7429.33
+ACC-0678,Vanguard Emporium,Retail,SD,2023-06-29,53500,12,1.271,1248.38,Late,5666.54
+ACC-0679,Rocky Peak DTC,E-Commerce,HI,2023-05-11,55000,12,1.283,1393.74,On Track,5880.42
+ACC-0680,Pioneer Delivery Co.,Logistics,MN,2023-02-01,103000,12,1.327,2539.15,Late,11390.08
+ACC-0681,Pioneer Roofing,Construction,MI,2024-09-24,107000,9,1.31,2933.82,On Track,15574.44
+ACC-0682,Prairie Apparel,Retail,TN,2023-06-13,46000,18,1.356,1284.66,On Track,3465.33
+ACC-0683,Old Town Fleet Services,Logistics,IN,2024-02-25,49000,9,1.292,1148.99,Late,7034.22
+ACC-0684,Downtown Express,Logistics,IL,2023-11-29,79500,12,1.364,1543.76,On Track,9036.5
+ACC-0685,Keystone Smokehouse,Food & Beverage,KY,2023-04-29,40000,6,1.449,613.68,On Track,9660.0
+ACC-0686,Blue River Remodeling,Construction,ME,2023-10-30,76000,12,1.255,1840.42,Late,7948.33
+ACC-0687,Crossroads Medical Group,Healthcare,GA,2023-03-02,52500,12,1.154,1437.56,On Track,5048.75
+ACC-0688,Northwind Storefront,E-Commerce,FL,2023-05-10,32500,12,1.188,707.14,Late,3217.5
+ACC-0689,Copper Chiropractic,Healthcare,ID,2023-04-13,32500,9,1.316,567.79,Paid Off,4752.22
+ACC-0690,Brookstone HVAC Services,Construction,MS,2024-08-25,122000,12,1.253,2357.19,Paid Off,12738.83
+ACC-0691,Patriot Transport,Logistics,LA,2024-02-19,50500,12,1.432,1143.82,On Track,6026.33
+ACC-0692,Emerald Masonry,Construction,MD,2024-11-07,135500,9,1.338,3733.05,On Track,20144.33
+ACC-0693,Brookstone Transport,Logistics,OK,2023-11-15,41500,18,1.306,729.42,Defaulted,3011.06
+ACC-0694,Downtown Transport,Logistics,IL,2023-05-28,64500,12,1.389,1559.76,On Track,7465.88
+ACC-0695,Lone Star Supply Co.,Retail,VA,2024-03-20,205000,18,1.228,5391.61,On Track,13985.56
+ACC-0696,Coastal Grill,Food & Beverage,PA,2024-11-10,30500,18,1.396,885.74,On Track,2365.44
+ACC-0697,Lakeside Roofing,Construction,FL,2024-01-25,19500,18,1.151,326.64,On Track,1246.92
+ACC-0698,Heritage Commerce Co.,E-Commerce,KS,2023-01-14,111500,12,1.336,3221.89,Paid Off,12413.67
+ACC-0699,Lakeside Dry Goods,Retail,GA,2023-08-10,35000,12,1.43,840.77,Late,4170.83
+ACC-0700,Granite Outfitters,Retail,IN,2024-11-07,54500,6,1.386,1444.28,Late,12589.5
+ACC-0701,Coastal Online,E-Commerce,ME,2024-01-14,40000,12,1.406,632.26,Late,4686.67
+ACC-0702,Blue River Shop,E-Commerce,CT,2024-11-26,63500,12,1.269,1434.61,On Track,6715.12
+ACC-0703,Rocky Peak Pizzeria,Food & Beverage,AL,2024-01-08,32500,12,1.397,791.03,On Track,3783.54
+ACC-0704,Maple Lane Eatery,Food & Beverage,MI,2023-01-09,50000,18,1.315,980.13,On Track,3652.78
+ACC-0705,Northwind Outfitters,Retail,OK,2024-09-30,70500,6,1.336,1513.97,Paid Off,15698.0
+ACC-0706,Patriot Storefront,E-Commerce,KS,2024-07-11,31500,9,1.168,734.41,On Track,4088.0
+ACC-0707,Emerald Outfitters,Retail,UT,2024-06-06,37500,12,1.21,873.31,Paid Off,3781.25
+ACC-0708,Copper Shop,E-Commerce,ME,2024-12-10,45500,9,1.315,711.07,On Track,6648.06
+ACC-0709,Rocky Peak Dermatology,Healthcare,VA,2023-05-24,25000,6,1.168,539.81,Late,4866.67
+ACC-0710,Lakeside Wellness Clinic,Healthcare,ID,2024-10-24,43500,6,1.372,792.02,Late,9947.0
+ACC-0711,Old Town Contracting,Construction,NE,2023-06-20,58500,12,1.402,1681.9,Late,6834.75
+ACC-0712,Blue River Marketplace,E-Commerce,RI,2024-12-10,44000,9,1.426,1304.54,On Track,6971.56
+ACC-0713,Prairie Masonry,Construction,AZ,2023-05-20,47500,6,1.181,926.0,Defaulted,9349.58
+ACC-0714,Market Street Carpentry,Construction,WA,2024-02-07,54500,6,1.432,960.71,On Track,13007.33
+ACC-0715,Lakeside Fleet Services,Logistics,ME,2024-07-31,38500,9,1.17,704.26,On Track,5005.0
+ACC-0716,Brookstone Builders,Construction,MO,2023-02-27,80500,6,1.292,1784.39,On Track,17334.33
+ACC-0717,Keystone Digital,E-Commerce,NY,2023-02-18,121000,12,1.402,3402.23,On Track,14136.83
+ACC-0718,Sapphire Medical Group,Healthcare,NC,2024-09-13,42500,12,1.171,956.27,Paid Off,4147.29
+ACC-0719,Golden State Bistro,Food & Beverage,AK,2023-02-14,72000,9,1.155,1139.82,On Track,9240.0
+ACC-0720,Lone Star Commerce Co.,E-Commerce,UT,2024-03-24,48000,12,1.157,748.72,On Track,4628.0
+ACC-0721,Northwind Goods,Retail,NY,2024-11-16,67000,6,1.303,1233.53,Paid Off,14550.17
+ACC-0722,Rocky Peak Trucking,Logistics,WY,2024-03-25,130000,9,1.393,3593.4,Late,20121.11
+ACC-0723,Vanguard Express,Logistics,MS,2023-12-18,73000,18,1.188,1775.52,Paid Off,4818.0
+ACC-0724,Granite Outfitters,Retail,NM,2023-11-02,20500,12,1.187,480.61,Paid Off,2027.79
+ACC-0725,Stonebridge HVAC Services,Construction,MN,2024-04-11,70500,18,1.321,1394.81,On Track,5173.92
+ACC-0726,Pine Hollow Supply Co.,Retail,VT,2024-02-23,108500,9,1.22,3140.14,Late,14707.78
+ACC-0727,Golden State Electric,Construction,TN,2024-01-02,48500,9,1.369,968.43,On Track,7377.39
+ACC-0728,Lakeside Goods,Retail,VA,2023-04-23,95000,9,1.435,2614.8,On Track,15147.22
+ACC-0729,Horizon Pediatrics,Healthcare,MT,2024-04-29,37500,9,1.38,1066.45,On Track,5750.0
+ACC-0730,Summit Outlet,E-Commerce,SC,2024-06-24,24500,18,1.413,545.13,Paid Off,1923.25
+ACC-0731,Blue River Carpentry,Construction,LA,2024-06-02,59500,6,1.306,1690.65,On Track,12951.17
+ACC-0732,Blue River Vision Center,Healthcare,MS,2023-02-24,21000,18,1.4,402.19,Paid Off,1633.33
+ACC-0733,Copper Freight,Logistics,RI,2024-05-28,48000,18,1.205,1194.07,On Track,3213.33
+ACC-0734,Patriot Remodeling,Construction,CA,2024-06-17,111500,12,1.171,1819.62,On Track,10880.54
+ACC-0735,Copper Smokehouse,Food & Beverage,OK,2023-05-15,19000,9,1.347,420.07,On Track,2843.67
+ACC-0736,Midtown Plumbing,Construction,AL,2024-09-12,27000,12,1.166,493.02,On Track,2623.5
+ACC-0737,Lakeside HVAC Services,Construction,NJ,2024-01-18,31000,9,1.418,494.18,On Track,4884.22
+ACC-0738,Oakline Chiropractic,Healthcare,MS,2023-12-12,53000,12,1.357,797.96,Paid Off,5993.42
+ACC-0739,Redwood Builders,Construction,MS,2024-06-12,45000,9,1.436,894.21,On Track,7180.0
+ACC-0740,Coastal Hauling,Logistics,MO,2024-01-08,118500,18,1.244,2825.39,On Track,8189.67
+ACC-0741,Meridian Plumbing,Construction,MO,2024-02-03,93000,12,1.296,2030.05,Paid Off,10044.0
+ACC-0742,Midtown Remodeling,Construction,MA,2023-08-17,72000,12,1.373,1405.91,On Track,8238.0
+ACC-0743,Patriot Commerce Co.,E-Commerce,MN,2024-11-09,59500,12,1.223,1777.15,On Track,6064.04
+ACC-0744,Trailhead Eatery,Food & Beverage,NH,2024-12-09,68500,12,1.313,1992.86,On Track,7495.04
+ACC-0745,Keystone HVAC Services,Construction,RI,2023-04-06,34000,18,1.348,574.08,On Track,2546.22
+ACC-0746,Highland Urgent Care,Healthcare,NV,2024-06-19,88000,6,1.444,1867.94,On Track,21178.67
+ACC-0747,Northwind Storefront,E-Commerce,NC,2023-01-18,30000,18,1.373,741.98,Paid Off,2288.33
+ACC-0748,Vanguard Eatery,Food & Beverage,TN,2023-09-27,87000,12,1.185,2262.21,On Track,8591.25
+ACC-0749,Oakline Grill,Food & Beverage,WY,2024-12-10,105500,18,1.293,2162.28,Late,7578.42
+ACC-0750,Northwind Dry Goods,Retail,CO,2023-05-08,62000,9,1.327,1624.04,On Track,9141.56
+ACC-0751,Cascade Trucking,Logistics,OK,2023-10-03,50000,12,1.194,843.11,Paid Off,4975.0
+ACC-0752,Granite Dry Goods,Retail,ID,2023-06-10,68500,9,1.28,1368.44,Late,9742.22
+ACC-0753,Trailhead Boutique,Retail,GA,2024-06-16,11500,12,1.235,296.08,On Track,1183.54
+ACC-0754,Midtown Trucking,Logistics,SC,2023-12-06,65000,6,1.186,1585.04,On Track,12848.33
+ACC-0755,Downtown Fulfillment,E-Commerce,AR,2024-03-09,51500,9,1.304,1419.24,On Track,7461.78
+ACC-0756,Lakeside Family Dental,Healthcare,TX,2024-11-20,53500,9,1.2,840.1,Defaulted,7133.33
+ACC-0757,Pine Hollow Builders,Construction,RI,2024-01-16,81000,9,1.327,1426.89,Defaulted,11943.0
+ACC-0758,Northwind Family Dental,Healthcare,WY,2024-06-20,53000,9,1.201,833.55,On Track,7072.56
+ACC-0759,Harbor Emporium,Retail,ND,2023-03-13,29500,12,1.367,527.51,Late,3360.54
+ACC-0760,Mainline Remodeling,Construction,UT,2023-06-07,51000,9,1.209,768.28,On Track,6851.0
+ACC-0761,Harbor Kitchen,Food & Beverage,CO,2024-11-23,57000,12,1.419,1286.1,On Track,6740.25
+ACC-0762,Midtown DTC,E-Commerce,VT,2024-09-20,58500,6,1.158,1341.1,Paid Off,11290.5
+ACC-0763,Compass Express,Logistics,FL,2024-04-25,60000,12,1.307,1492.1,On Track,6535.0
+ACC-0764,Urban Trucking,Logistics,KS,2023-10-04,97500,12,1.246,2025.43,On Track,10123.75
+ACC-0765,Blue River Wellness Clinic,Healthcare,CT,2023-05-27,30500,9,1.218,458.97,Late,4127.67
+ACC-0766,Evergreen Excavation,Construction,MA,2024-09-14,60500,12,1.291,1519.06,On Track,6508.79
+ACC-0767,Cascade Commerce Co.,E-Commerce,PA,2024-07-28,112000,18,1.403,1771.21,Paid Off,8729.78
+ACC-0768,Willow Vision Center,Healthcare,IN,2023-06-26,21000,12,1.425,587.84,On Track,2493.75
+ACC-0769,Rocky Peak Dry Goods,Retail,TN,2024-03-07,60500,9,1.241,928.06,On Track,8342.28
+ACC-0770,Ironclad Family Dental,Healthcare,NM,2024-03-28,40000,9,1.196,918.29,On Track,5315.56
+ACC-0771,Sunrise Shop,E-Commerce,NY,2023-12-16,45000,12,1.366,1279.07,Defaulted,5122.5
+ACC-0772,Willow Logistics Group,Logistics,WA,2024-11-08,33500,9,1.325,790.18,On Track,4931.94
+ACC-0773,Sapphire Mercantile,Retail,MI,2023-04-01,50000,12,1.21,1206.31,On Track,5041.67
+ACC-0774,Midtown Remodeling,Construction,LA,2023-07-08,151500,9,1.378,3821.46,Paid Off,23196.33
+ACC-0775,Redwood Dispatch,Logistics,WY,2023-03-11,27500,12,1.306,462.99,Defaulted,2992.92
+ACC-0776,Cedar Grove Logistics Group,Logistics,NV,2024-05-21,29000,6,1.346,728.59,Defaulted,6505.67
+ACC-0777,Vanguard Chiropractic,Healthcare,NM,2024-04-15,27000,6,1.258,761.54,Paid Off,5661.0
+ACC-0778,Downtown Trading Co.,Retail,IA,2024-12-22,142000,18,1.282,4205.09,On Track,10113.56
+ACC-0779,Prairie Bistro,Food & Beverage,HI,2024-02-01,42500,18,1.204,919.95,Paid Off,2842.78
+ACC-0780,Brookstone Transport,Logistics,FL,2023-04-21,54000,18,1.377,1089.05,Late,4131.0
+ACC-0781,Heritage Logistics Group,Logistics,ID,2023-11-26,44000,18,1.197,1157.18,Late,2926.0
+ACC-0782,New Day Digital,E-Commerce,GA,2023-03-06,32500,9,1.383,752.15,Late,4994.17
+ACC-0783,Compass Boutique,Retail,PA,2024-05-05,48500,9,1.389,914.69,On Track,7485.17
+ACC-0784,Midtown Outfitters,Retail,AZ,2024-05-07,212500,6,1.374,3736.25,On Track,48662.5
+ACC-0785,Oakline Wellness Clinic,Healthcare,NY,2024-09-18,118500,12,1.156,2080.08,Paid Off,11415.5
+ACC-0786,Ironclad Commerce Co.,E-Commerce,WV,2023-09-06,34500,9,1.232,755.12,On Track,4722.67
+ACC-0787,Evergreen Trading Co.,Retail,RI,2023-08-15,78500,18,1.291,1377.82,On Track,5630.19
+ACC-0788,Patriot Carpentry,Construction,MA,2023-02-22,35000,6,1.329,535.35,On Track,7752.5
+ACC-0789,Mainline Digital,E-Commerce,AZ,2023-10-31,20500,6,1.426,323.52,Paid Off,4872.17
+ACC-0790,Crossroads Goods,Retail,TN,2023-12-14,96500,9,1.263,2793.51,Late,13542.17
+ACC-0791,Oakline Emporium,Retail,AL,2024-07-05,104000,6,1.413,1673.82,Late,24492.0
+ACC-0792,Trailhead Urgent Care,Healthcare,OH,2024-07-05,98000,9,1.199,1577.58,Late,13055.78
+ACC-0793,Silver Creek Excavation,Construction,ND,2023-04-13,42500,12,1.261,925.13,Late,4466.04
+ACC-0794,Old Town Carpentry,Construction,GA,2023-07-28,50000,9,1.166,933.83,Paid Off,6477.78
+ACC-0795,Old Town Home Health,Healthcare,OR,2024-01-09,83000,12,1.373,2443.55,On Track,9496.58
+ACC-0796,Rocky Peak Cafe,Food & Beverage,FL,2023-09-02,68000,18,1.195,1949.21,Paid Off,4514.44
+ACC-0797,Emerald Transport,Logistics,ID,2023-01-19,44500,12,1.227,937.67,On Track,4550.13
+ACC-0798,Lone Star Pediatrics,Healthcare,SD,2024-09-10,22500,12,1.383,488.95,On Track,2593.12
+ACC-0799,Old Town Bistro,Food & Beverage,WI,2024-06-18,58500,9,1.31,1206.66,On Track,8515.0
+ACC-0800,Golden State Medical Group,Healthcare,IN,2024-01-16,99500,6,1.154,1549.02,Late,19137.17
