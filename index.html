@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClearFund Capital — Portfolio Analytics Dashboard</title>
+
+    <!-- CDN dependencies: no npm, no backend, no framework -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+
+    <style>
+        :root {
+            --cfg-primary:   #1F4E79;
+            --cfg-secondary: #2E75B6;
+            --cfg-accent:    #4BACC6;
+            --cfg-bg:        #F4F6F9;
+            --cfg-card:      #FFFFFF;
+            --cfg-text:      #1F2937;
+            --cfg-muted:     #6B7280;
+            --cfg-grid:      #E5EAF0;
+            --cfg-success:   #1E7D45;
+            --cfg-warning:   #E28B2E;
+            --cfg-danger:    #C00000;
+            --cfg-heat-lo:   #D4EDDA;
+            --cfg-heat-mid:  #FFF3CD;
+            --cfg-heat-hi:   #F8D7DA;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--cfg-bg);
+            color: var(--cfg-text);
+            font-family: "Inter", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header */
+        .app-header {
+            background-color: var(--cfg-primary);
+            color: #fff;
+            padding: 18px 28px;
+            box-shadow: 0 2px 6px rgba(31, 78, 121, 0.18);
+        }
+        .app-header h1 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+        .app-header .subtitle {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-top: 2px;
+        }
+
+        /* Tabs */
+        .tab-bar {
+            background: #fff;
+            border-bottom: 1px solid var(--cfg-grid);
+            padding: 0 28px;
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+        }
+        .tab-bar button {
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--cfg-muted);
+            padding: 14px 18px;
+            font-size: 0.92rem;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: color 0.15s ease, border-color 0.15s ease;
+            font-family: inherit;
+        }
+        .tab-bar button:hover { color: var(--cfg-primary); }
+        .tab-bar button.active {
+            color: var(--cfg-primary);
+            border-bottom-color: var(--cfg-accent);
+            font-weight: 600;
+        }
+
+        /* Main content */
+        main { padding: 24px 28px 32px; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .view-title {
+            color: var(--cfg-primary);
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 4px 0 4px;
+        }
+        .view-subtitle {
+            color: var(--cfg-muted);
+            font-size: 0.93rem;
+            margin-bottom: 18px;
+        }
+
+        /* KPIs */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .kpi-card {
+            background: var(--cfg-card);
+            border: 1px solid var(--cfg-grid);
+            border-radius: 8px;
+            padding: 16px 18px;
+            box-shadow: 0 1px 2px rgba(31, 78, 121, 0.05);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(31, 78, 121, 0.10);
+        }
+        .kpi-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: var(--cfg-muted);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .kpi-value {
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--cfg-primary);
+            line-height: 1.15;
+        }
+        .kpi-sub {
+            font-size: 0.75rem;
+            color: var(--cfg-muted);
+            margin-top: 4px;
+        }
+
+        /* Chart grid */
+        .chart-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+        .chart-grid-1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+        .chart-card {
+            background: var(--cfg-card);
+            border: 1px solid var(--cfg-grid);
+            border-radius: 8px;
+            padding: 16px 18px 20px;
+            box-shadow: 0 1px 2px rgba(31, 78, 121, 0.04);
+        }
+        .chart-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--cfg-primary);
+            margin: 0 0 12px;
+        }
+        .chart-wrapper {
+            position: relative;
+            height: 360px;
+        }
+        .chart-wrapper.tall { height: 420px; }
+
+        /* Filters */
+        .filter-bar {
+            background: var(--cfg-card);
+            border: 1px solid var(--cfg-grid);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .filter-bar label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            color: var(--cfg-muted);
+        }
+        .filter-bar select {
+            padding: 6px 10px;
+            border: 1px solid var(--cfg-grid);
+            border-radius: 6px;
+            background: #fff;
+            color: var(--cfg-text);
+            font-size: 0.9rem;
+            font-family: inherit;
+            min-width: 180px;
+            cursor: pointer;
+        }
+        .filter-bar select:focus {
+            outline: 2px solid var(--cfg-accent);
+            outline-offset: 1px;
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .data-table thead th {
+            background: var(--cfg-primary);
+            color: #fff;
+            text-align: left;
+            padding: 10px 14px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            position: sticky;
+            top: 0;
+        }
+        .data-table tbody td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--cfg-grid);
+        }
+        .data-table tbody tr:nth-child(odd) { background: #F9FBFD; }
+        .data-table tbody tr:hover { background: #EEF4FB; }
+        .data-table .cohort-cell { font-weight: 600; color: var(--cfg-primary); }
+
+        /* Heatmap cells */
+        .cell-heat-low    { background: var(--cfg-heat-lo); color: #125A2E; font-weight: 600; }
+        .cell-heat-mid    { background: var(--cfg-heat-mid); color: #8C5A00; font-weight: 600; }
+        .cell-heat-high   { background: var(--cfg-heat-hi); color: var(--cfg-danger); font-weight: 700; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: var(--cfg-muted);
+            font-size: 0.82rem;
+            padding: 16px 20px;
+            border-top: 1px solid var(--cfg-grid);
+            background: var(--cfg-card);
+            letter-spacing: 0.2px;
+            margin-top: 20px;
+        }
+
+        /* Loading / error */
+        .status-panel {
+            background: var(--cfg-card);
+            border: 1px solid var(--cfg-grid);
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            color: var(--cfg-muted);
+        }
+        .status-panel.error {
+            border-color: var(--cfg-danger);
+            color: var(--cfg-danger);
+            background: #FFF5F5;
+        }
+        .status-panel code {
+            background: #F0F2F5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            color: var(--cfg-text);
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 1100px) {
+            .kpi-row { grid-template-columns: repeat(2, 1fr); }
+            .chart-grid-2 { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .app-header { padding: 14px 16px; }
+            main { padding: 16px 14px 24px; }
+            .tab-bar { padding: 0 14px; }
+            .kpi-row { grid-template-columns: 1fr; }
+            .chart-wrapper { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="app-header">
+    <h1>ClearFund Capital — Portfolio Analytics Dashboard</h1>
+    <div class="subtitle">Revenue-based small business lending · Demo portfolio, 2023 – 2024</div>
+</header>
+
+<nav class="tab-bar" id="tab-bar" role="tablist">
+    <button class="tab-btn active" data-tab="overview" role="tab">Portfolio Overview</button>
+    <button class="tab-btn"        data-tab="industry" role="tab">Industry Performance</button>
+    <button class="tab-btn"        data-tab="cohort"   role="tab">Cohort Performance</button>
+    <button class="tab-btn"        data-tab="cashflow" role="tab">Monthly Cashflow</button>
+</nav>
+
+<main>
+    <div id="load-status" class="status-panel">Loading portfolio data…</div>
+
+    <!-- ============================ TAB 1 ============================ -->
+    <section id="tab-overview" class="tab-content" role="tabpanel" hidden>
+        <h2 class="view-title">Portfolio Overview</h2>
+        <p class="view-subtitle">Headline funding, collection, and outstanding balance across all ClearFund-backed loans.</p>
+
+        <div class="filter-bar">
+            <label for="status-filter">Repayment Status</label>
+            <select id="status-filter">
+                <option value="__all__">All statuses</option>
+            </select>
+        </div>
+
+        <div class="kpi-row" id="overview-kpis"></div>
+
+        <div class="chart-grid-2">
+            <div class="chart-card">
+                <h3 class="chart-title">Account Count by Repayment Status</h3>
+                <div class="chart-wrapper"><canvas id="chart-status"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title">Total Funded by Industry</h3>
+                <div class="chart-wrapper"><canvas id="chart-industry-funded"></canvas></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ TAB 2 ============================ -->
+    <section id="tab-industry" class="tab-content" role="tabpanel" hidden>
+        <h2 class="view-title">Industry Performance</h2>
+        <p class="view-subtitle">Where risk concentrates in the portfolio: default rates and status mix by industry.</p>
+
+        <div class="chart-grid-2">
+            <div class="chart-card">
+                <h3 class="chart-title">Default Rate by Industry</h3>
+                <div class="chart-wrapper"><canvas id="chart-default-rate"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title">Status Mix by Industry</h3>
+                <div class="chart-wrapper"><canvas id="chart-status-mix"></canvas></div>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h3 class="chart-title">Industry Summary</h3>
+            <table class="data-table" id="industry-table">
+                <thead>
+                    <tr>
+                        <th>Industry</th>
+                        <th>Total Accounts</th>
+                        <th>Avg % Repaid</th>
+                        <th>Default Rate</th>
+                        <th>Late Rate</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ============================ TAB 3 ============================ -->
+    <section id="tab-cohort" class="tab-content" role="tabpanel" hidden>
+        <h2 class="view-title">Cohort Performance</h2>
+        <p class="view-subtitle">Vintage analysis — how each disbursement-month cohort is aging against repayment and default.</p>
+
+        <div class="chart-grid-2">
+            <div class="chart-card">
+                <h3 class="chart-title">Avg % Repaid by Cohort</h3>
+                <div class="chart-wrapper"><canvas id="chart-cohort-repaid"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title">Total Funded by Cohort</h3>
+                <div class="chart-wrapper"><canvas id="chart-cohort-funded"></canvas></div>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h3 class="chart-title">Cohort Detail (default rate color-coded)</h3>
+            <table class="data-table" id="cohort-table">
+                <thead>
+                    <tr>
+                        <th>Cohort</th>
+                        <th>Total Accounts</th>
+                        <th>Avg % Repaid</th>
+                        <th>Default Rate</th>
+                        <th>Total Funded</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ============================ TAB 4 ============================ -->
+    <section id="tab-cashflow" class="tab-content" role="tabpanel" hidden>
+        <h2 class="view-title">Monthly Cashflow</h2>
+        <p class="view-subtitle">Scheduled vs. collected inflows by month, with a flagging view of monthly shortfall.</p>
+
+        <div class="kpi-row" id="cashflow-kpis"></div>
+
+        <div class="chart-grid-1">
+            <div class="chart-card">
+                <h3 class="chart-title">Scheduled vs. Collected by Month</h3>
+                <div class="chart-wrapper tall"><canvas id="chart-cashflow"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title">Collection Gap by Month (red = above average)</h3>
+                <div class="chart-wrapper"><canvas id="chart-gap"></canvas></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    ClearFund Capital Portfolio Analytics | Demo Project by Pooja Pranavi Nalamothu
+</footer>
+
+<script>
+/* =====================================================================
+   ClearFund Capital — Portfolio Analytics Dashboard (vanilla JS)
+   ===================================================================== */
+
+const COLORS = {
+    primary:   "#1F4E79",
+    secondary: "#2E75B6",
+    accent:    "#4BACC6",
+    success:   "#1E7D45",
+    warning:   "#E28B2E",
+    danger:    "#C00000",
+    muted:     "#6B7280",
+    grid:      "#E5EAF0",
+    status: {
+        "On Track":  "#1E7D45",
+        "Paid Off":  "#2E75B6",
+        "Late":      "#E28B2E",
+        "Defaulted": "#C00000"
+    }
+};
+
+const STATUS_ORDER = ["On Track", "Paid Off", "Late", "Defaulted"];
+
+const DATA_FILES = {
+    portfolio: "tableau_exports/rpt_portfolio_summary.csv",
+    industry:  "tableau_exports/rpt_industry_performance.csv",
+    cohort:    "tableau_exports/rpt_cohort_performance.csv",
+    cashflow:  "tableau_exports/rpt_monthly_cashflow.csv"
+};
+
+const DATA = {};
+const CHARTS = {};
+
+// Shared Chart.js defaults
+Chart.defaults.font.family = '"Inter", "Helvetica Neue", "Segoe UI", Arial, sans-serif';
+Chart.defaults.color = "#1F2937";
+Chart.defaults.plugins.tooltip.backgroundColor = "#FFFFFF";
+Chart.defaults.plugins.tooltip.titleColor = COLORS.primary;
+Chart.defaults.plugins.tooltip.bodyColor = "#1F2937";
+Chart.defaults.plugins.tooltip.borderColor = COLORS.grid;
+Chart.defaults.plugins.tooltip.borderWidth = 1;
+Chart.defaults.plugins.tooltip.padding = 10;
+Chart.defaults.plugins.legend.labels.usePointStyle = true;
+Chart.defaults.plugins.legend.labels.boxWidth = 8;
+Chart.defaults.plugins.legend.labels.boxHeight = 8;
+
+/* ---------------------- Formatting helpers ---------------------- */
+const fmtCurrency = v => {
+    if (v == null || isNaN(v)) return "—";
+    return "$" + v.toLocaleString("en-US", {maximumFractionDigits: 0});
+};
+const fmtCurrencyM = v => {
+    if (v == null || isNaN(v)) return "—";
+    if (Math.abs(v) >= 1e6) return "$" + (v / 1e6).toFixed(2) + "M";
+    if (Math.abs(v) >= 1e3) return "$" + (v / 1e3).toFixed(1) + "K";
+    return fmtCurrency(v);
+};
+const fmtPct = v => {
+    if (v == null || isNaN(v)) return "—";
+    return v.toFixed(1) + "%";
+};
+const sum = (arr, key) => arr.reduce((a, r) => a + (+r[key] || 0), 0);
+const avg = arr => arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
+
+/* ---------------------- CSV load ---------------------- */
+function loadCsv(path) {
+    return new Promise((resolve, reject) => {
+        Papa.parse(path, {
+            download: true,
+            header: true,
+            dynamicTyping: true,
+            skipEmptyLines: true,
+            complete: res => {
+                if (res.errors && res.errors.length) {
+                    console.warn("PapaParse warnings for", path, res.errors);
+                }
+                resolve(res.data);
+            },
+            error: err => reject(err)
+        });
+    });
+}
+
+async function loadAll() {
+    const status = document.getElementById("load-status");
+    try {
+        const [portfolio, industry, cohort, cashflow] = await Promise.all([
+            loadCsv(DATA_FILES.portfolio),
+            loadCsv(DATA_FILES.industry),
+            loadCsv(DATA_FILES.cohort),
+            loadCsv(DATA_FILES.cashflow)
+        ]);
+        DATA.portfolio = portfolio;
+        DATA.industry  = industry;
+        DATA.cohort    = cohort.slice().sort(
+            (a, b) => a.disbursement_cohort.localeCompare(b.disbursement_cohort)
+        );
+        DATA.cashflow  = cashflow.slice().sort(
+            (a, b) => a.month.localeCompare(b.month)
+        );
+        status.remove();
+        initDashboard();
+    } catch (err) {
+        console.error(err);
+        status.className = "status-panel error";
+        status.innerHTML =
+            "<strong>Could not load portfolio data.</strong><br><br>" +
+            "Most browsers block <code>fetch()</code> on <code>file://</code> URLs. " +
+            "Serve this folder over HTTP first, for example:<br><br>" +
+            "<code>python3 -m http.server 8000</code><br><br>" +
+            "…then open <code>http://localhost:8000/index.html</code>. " +
+            "GitHub Pages works without any setup.";
+    }
+}
+
+/* ---------------------- Init ---------------------- */
+function initDashboard() {
+    setupTabs();
+    setupStatusFilter();
+    renderOverview();
+    renderIndustry();
+    renderCohort();
+    renderCashflow();
+}
+
+function setupTabs() {
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const target = btn.dataset.tab;
+            document.querySelectorAll(".tab-btn").forEach(b =>
+                b.classList.toggle("active", b === btn)
+            );
+            document.querySelectorAll(".tab-content").forEach(section => {
+                const isActive = section.id === "tab-" + target;
+                section.classList.toggle("active", isActive);
+                section.hidden = !isActive;
+            });
+            // Chart.js canvases sized while hidden need a nudge.
+            Object.values(CHARTS).forEach(c => { try { c.resize(); } catch (_) {} });
+        });
+    });
+    // show default tab
+    document.getElementById("tab-overview").hidden = false;
+    document.getElementById("tab-overview").classList.add("active");
+}
+
+/* ========================= TAB 1 ========================= */
+
+function setupStatusFilter() {
+    const sel = document.getElementById("status-filter");
+    const statuses = Array.from(new Set(
+        DATA.portfolio.map(r => r.repayment_status).filter(Boolean)
+    )).sort((a, b) => STATUS_ORDER.indexOf(a) - STATUS_ORDER.indexOf(b));
+
+    statuses.forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        sel.appendChild(opt);
+    });
+
+    sel.addEventListener("change", renderOverview);
+}
+
+function renderOverview() {
+    const sel = document.getElementById("status-filter");
+    const selected = sel ? sel.value : "__all__";
+    const rows = selected === "__all__"
+        ? DATA.portfolio
+        : DATA.portfolio.filter(r => r.repayment_status === selected);
+
+    renderOverviewKpis(rows);
+    renderStatusChart(rows, selected);
+    renderIndustryFundedChart(rows);
+}
+
+function renderOverviewKpis(rows) {
+    const totalFunded      = sum(rows, "funding_amount");
+    const totalOutstanding = sum(rows, "outstanding_balance");
+    const totalCollected   = sum(rows, "total_paid");
+    const totalRepayable   = sum(rows, "total_repayable");
+    const collectionRate   = totalRepayable > 0
+        ? (totalCollected / totalRepayable) * 100 : 0;
+
+    const kpis = [
+        {label: "Total Funded",            value: fmtCurrencyM(totalFunded),
+         sub: rows.length.toLocaleString() + " accounts"},
+        {label: "Outstanding Balance",     value: fmtCurrencyM(totalOutstanding),
+         sub: "Remaining contracted"},
+        {label: "Total Collected",         value: fmtCurrencyM(totalCollected),
+         sub: "Payments received to date"},
+        {label: "Overall Collection Rate", value: fmtPct(collectionRate),
+         sub: "Collected / total repayable"}
+    ];
+
+    const container = document.getElementById("overview-kpis");
+    container.innerHTML = kpis.map(k => `
+        <div class="kpi-card">
+            <div class="kpi-label">${k.label}</div>
+            <div class="kpi-value">${k.value}</div>
+            <div class="kpi-sub">${k.sub}</div>
+        </div>
+    `).join("");
+}
+
+function renderStatusChart(rows, selected) {
+    const counts = {};
+    STATUS_ORDER.forEach(s => counts[s] = 0);
+    rows.forEach(r => {
+        if (counts.hasOwnProperty(r.repayment_status)) counts[r.repayment_status]++;
+    });
+
+    const labels = STATUS_ORDER.filter(s => selected === "__all__" || s === selected);
+    const data   = labels.map(s => counts[s]);
+    const colors = labels.map(s => COLORS.status[s]);
+
+    destroyChart("status");
+    CHARTS.status = new Chart(document.getElementById("chart-status"), {
+        type: "bar",
+        data: {
+            labels,
+            datasets: [{
+                label: "Accounts",
+                data,
+                backgroundColor: colors,
+                borderRadius: 4,
+                borderSkipped: false,
+                maxBarThickness: 48
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: "y",
+            plugins: {
+                legend: {display: false},
+                tooltip: {
+                    callbacks: {
+                        label: ctx => ctx.parsed.x.toLocaleString() + " accounts"
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {display: true, text: "Account Count", color: COLORS.muted},
+                    beginAtZero: true,
+                    grid: {color: COLORS.grid},
+                    ticks: {callback: v => v.toLocaleString()}
+                },
+                y: {grid: {display: false}}
+            }
+        }
+    });
+}
+
+function renderIndustryFundedChart(rows) {
+    const totals = {};
+    rows.forEach(r => {
+        if (!r.industry) return;
+        totals[r.industry] = (totals[r.industry] || 0) + (+r.funding_amount || 0);
+    });
+
+    const entries = Object.entries(totals).sort((a, b) => b[1] - a[1]);
+    const labels = entries.map(e => e[0]);
+    const data   = entries.map(e => e[1]);
+
+    // Blue gradient: darkest on largest
+    const max = Math.max(...data, 1);
+    const palette = data.map(v => shadeBlue(1 - v / max));
+
+    destroyChart("industryFunded");
+    CHARTS.industryFunded = new Chart(document.getElementById("chart-industry-funded"), {
+        type: "bar",
+        data: {
+            labels,
+            datasets: [{
+                label: "Total Funded",
+                data,
+                backgroundColor: palette,
+                borderRadius: 4,
+                borderSkipped: false,
+                maxBarThickness: 56
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {display: false},
+                tooltip: {
+                    callbacks: {
+                        label: ctx => "Funded: " + fmtCurrency(ctx.parsed.y)
+                    }
+                }
+            },
+            scales: {
+                x: {grid: {display: false}},
+                y: {
+                    title: {display: true, text: "Total Funded (USD)", color: COLORS.muted},
+                    beginAtZero: true,
+                    grid: {color: COLORS.grid},
+                    ticks: {callback: v => fmtCurrencyM(v)}
+                }
+            }
+        }
+    });
+}
+
+/* Returns a blue hex that darkens as t -> 0 (t in [0,1]). */
+function shadeBlue(t) {
+    const light = [119, 168, 208];  // ~ #77A8D0
+    const dark  = [31,  78, 121];   // primary
+    const mix = (a, b) => Math.round(a + (b - a) * (1 - t));
+    const r = mix(light[0], dark[0]);
+    const g = mix(light[1], dark[1]);
+    const b = mix(light[2], dark[2]);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+/* ========================= TAB 2 ========================= */
+
+function renderIndustry() {
+    const df = DATA.industry.slice().sort(
+        (a, b) => (+b.default_rate) - (+a.default_rate)
+    );
+
+    /* Chart 1 — default_rate by industry, light-to-dark red */
+    const maxDefault = Math.max(...df.map(r => +r.default_rate), 1);
+    const redPalette = df.map(r => redShade((+r.default_rate) / maxDefault));
+
+    destroyChart("defaultRate");
+    CHARTS.defaultRate = new Chart(document.getElementById("chart-default-rate"), {
+        type: "bar",
+        data: {
+            labels: df.map(r => r.industry),
+            datasets: [{
+                label: "Default Rate",
+                data: df.map(r => +r.default_rate),
+                backgroundColor: redPalette,
+                borderRadius: 4,
+                borderSkipped: false,
+                maxBarThickness: 38
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: "y",
+            plugins: {
+                legend: {display: false},
+                tooltip: {
+                    callbacks: {
+                        label: ctx => "Default rate: " + fmtPct(ctx.parsed.x)
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {display: true, text: "Default Rate (%)", color: COLORS.muted},
+                    beginAtZero: true,
+                    grid: {color: COLORS.grid},
+                    ticks: {callback: v => v + "%"}
+                },
+                y: {grid: {display: false}}
+            }
+        }
+    });
+
+    /* Chart 2 — stacked horizontal bar, status mix */
+    destroyChart("statusMix");
+    CHARTS.statusMix = new Chart(document.getElementById("chart-status-mix"), {
+        type: "bar",
+        data: {
+            labels: df.map(r => r.industry),
+            datasets: [
+                {label: "On Track",  data: df.map(r => +r.on_track_count),
+                 backgroundColor: COLORS.status["On Track"]},
+                {label: "Paid Off",  data: df.map(r => +r.paid_off_count),
+                 backgroundColor: COLORS.status["Paid Off"]},
+                {label: "Late",      data: df.map(r => +r.late_count),
+                 backgroundColor: COLORS.status["Late"]},
+                {label: "Defaulted", data: df.map(r => +r.default_count),
+                 backgroundColor: COLORS.status["Defaulted"]}
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: "y",
+            plugins: {
+                legend: {position: "top"},
+                tooltip: {
+                    callbacks: {
+                        label: ctx => `${ctx.dataset.label}: ${ctx.parsed.x.toLocaleString()} accts`
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                    title: {display: true, text: "Account Count", color: COLORS.muted},
+                    grid: {color: COLORS.grid},
+                    ticks: {callback: v => v.toLocaleString()}
+                },
+                y: {stacked: true, grid: {display: false}}
+            }
+        }
+    });
+
+    /* Table */
+    const tbody = document.querySelector("#industry-table tbody");
+    tbody.innerHTML = df.map(r => `
+        <tr>
+            <td><strong>${r.industry}</strong></td>
+            <td>${(+r.total_accounts).toLocaleString()}</td>
+            <td>${fmtPct(+r.avg_pct_repaid)}</td>
+            <td>${fmtPct(+r.default_rate)}</td>
+            <td>${fmtPct(+r.late_rate)}</td>
+        </tr>
+    `).join("");
+}
+
+/* Returns a red hex that darkens as t -> 1 (t in [0,1]). */
+function redShade(t) {
+    const light = [255, 220, 220]; // very light red
+    const dark  = [165,  30,  30]; // deep red
+    const mix = (a, b) => Math.round(a + (b - a) * t);
+    const r = mix(light[0], dark[0]);
+    const g = mix(light[1], dark[1]);
+    const b = mix(light[2], dark[2]);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+/* ========================= TAB 3 ========================= */
+
+function renderCohort() {
+    const df = DATA.cohort;
+
+    /* Line chart — avg_pct_repaid */
+    destroyChart("cohortRepaid");
+    CHARTS.cohortRepaid = new Chart(document.getElementById("chart-cohort-repaid"), {
+        type: "line",
+        data: {
+            labels: df.map(r => r.disbursement_cohort),
+            datasets: [{
+                label: "Avg % Repaid",
+                data: df.map(r => +r.avg_pct_repaid),
+                borderColor: COLORS.primary,
+                backgroundColor: "rgba(31, 78, 121, 0.12)",
+                pointBackgroundColor: COLORS.primary,
+                pointBorderColor: "#fff",
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                tension: 0.35,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {display: false},
+                tooltip: {
+                    callbacks: {
+                        label: ctx => "Avg % Repaid: " + fmtPct(ctx.parsed.y)
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {display: true, text: "Disbursement Cohort", color: COLORS.muted},
+                    grid: {display: false}
+                },
+                y: {
+                    title: {display: true, text: "Avg % Repaid", color: COLORS.muted},
+                    beginAtZero: true,
+                    suggestedMax: 100,
+                    grid: {color: COLORS.grid},
+                    ticks: {callback: v => v + "%"}
+                }
+            }
+        }
+    });
+
+    /* Bar chart — total funded by cohort */
+    destroyChart("cohortFunded");
+    CHARTS.cohortFunded = new Chart(document.getElementById("chart-cohort-funded"), {
+        type: "bar",
+        data: {
+            labels: df.map(r => r.disbursement_cohort),
+            datasets: [{
+                label: "Total Funded",
+                data: df.map(r => +r.total_funded),
+                backgroundColor: COLORS.secondary,
+                borderRadius: 4,
+                borderSkipped: false,
+                maxBarThickness: 22
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {display: false},
+                tooltip: {
+                    callbacks: {
+                        label: ctx => "Funded: " + fmtCurrency(ctx.parsed.y)
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {display: true, text: "Disbursement Cohort", color: COLORS.muted},
+                    grid: {display: false}
+                },
+                y: {
+                    title: {display: true, text: "Total Funded (USD)", color: COLORS.muted},
+                    beginAtZero: true,
+                    grid: {color: COLORS.grid},
+                    ticks: {callback: v => fmtCurrencyM(v)}
+                }
+            }
+        }
+    });
+
+    /* Color-coded cohort table */
+    const tbody = document.querySelector("#cohort-table tbody");
+    tbody.innerHTML = df.map(r => {
+        const dr = +r.default_rate;
+        let cls = "cell-heat-low";
+        if (dr >= 15)      cls = "cell-heat-high";
+        else if (dr >= 5)  cls = "cell-heat-mid";
+        return `
+            <tr>
+                <td class="cohort-cell">${r.disbursement_cohort}</td>
+                <td>${(+r.total_accounts).toLocaleString()}</td>
+                <td>${fmtPct(+r.avg_pct_repaid)}</td>
+                <td class="${cls}">${fmtPct(dr)}</td>
+                <td>${fmtCurrency(+r.total_funded)}</td>
+            </tr>
+        `;
+    }).join("");
+}
+
+/* ========================= TAB 4 ========================= */
+
+function renderCashflow() {
+    const df = DATA.cashflow;
+
+    /* KPI — avg monthly collection rate */
+    const rates = df.map(r => +r.collection_rate).filter(v => !isNaN(v));
+    const avgRate = avg(rates);
+
+    document.getElementById("cashflow-kpis").innerHTML = `
+        <div class="kpi-card" style="grid-column: 1 / -1; max-width: 380px;">
+            <div class="kpi-label">Average Monthly Collection Rate</div>
+            <div class="kpi-value">${fmtPct(avgRate)}</div>
+            <div class="kpi-sub">Across ${df.length} months of activity</div>
+        </div>
+    `;
+
+    /* Dual-axis line — scheduled (dashed blue) vs collected (solid green) */
+    destroyChart("cashflow");
+    CHARTS.cashflow = new Chart(document.getElementById("chart-cashflow"), {
+        type: "line",
+        data: {
+            labels: df.map(r => r.month),
+            datasets: [
+                {
+                    label: "Total Scheduled",
+                    data: df.map(r => +r.total_scheduled),
+                    borderColor: COLORS.primary,
+                    backgroundColor: "rgba(31, 78, 121, 0.12)",
+                    borderDash: [6, 4],
+                    pointBackgroundColor: COLORS.primary,
+                    pointBorderColor: "#fff",
+                    pointRadius: 4,
+                    tension: 0.3,
+                    yAxisID: "y"
+                },
+                {
+                    label: "Total Collected",
+                    data: df.map(r => +r.total_collected),
+                    borderColor: COLORS.success,
+                    backgroundColor: "rgba(30, 125, 69, 0.12)",
+                    pointBackgroundColor: COLORS.success,
+                    pointBorderColor: "#fff",
+                    pointRadius: 4,
+                    tension: 0.3,
+                    yAxisID: "y"
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {mode: "index", intersect: false},
+            plugins: {
+                legend: {position: "top"},
+                tooltip: {
+                    callbacks: {
+                        label: ctx => ctx.dataset.label + ": " + fmtCurrency(ctx.parsed.y)
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {display: true, text: "Month", color: COLORS.muted},
+                    grid: {display: false}
+                },
+                y: {
+                    title: {display: true, text: "Dollar Amount (USD)", color: COLORS.muted},
+                    beginAtZero: true,
+                    grid: {color: COLORS.grid},
+                    ticks: {callback: v => fmtCurrencyM(v)}
+                }
+            }
+        }
+    });
+
+    /* Bar — total_gap, red above avg gap, orange below */
+    const gaps = df.map(r => +r.total_gap);
+    const avgGap = avg(gaps);
+    const gapColors = gaps.map(v => v > avgGap ? COLORS.danger : COLORS.warning);
+
+    destroyChart("gap");
+    CHARTS.gap = new Chart(document.getElementById("chart-gap"), {
+        type: "bar",
+        data: {
+            labels: df.map(r => r.month),
+            datasets: [{
+                label: "Collection Gap",
+                data: gaps,
+                backgroundColor: gapColors,
+                borderRadius: 4,
+                borderSkipped: false,
+                maxBarThickness: 22
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {display: false},
+                tooltip: {
+                    callbacks: {
+                        label: ctx => "Gap: " + fmtCurrency(ctx.parsed.y) +
+                                      (ctx.parsed.y > avgGap ? "  (above avg)" : "  (below avg)")
+                    }
+                },
+                annotation: undefined
+            },
+            scales: {
+                x: {
+                    title: {display: true, text: "Month", color: COLORS.muted},
+                    grid: {display: false}
+                },
+                y: {
+                    title: {display: true, text: "Collection Gap (USD)", color: COLORS.muted},
+                    beginAtZero: true,
+                    grid: {color: COLORS.grid},
+                    ticks: {callback: v => fmtCurrencyM(v)}
+                }
+            }
+        }
+    });
+}
+
+/* ---------------------- Helpers ---------------------- */
+function destroyChart(key) {
+    if (CHARTS[key]) {
+        CHARTS[key].destroy();
+        delete CHARTS[key];
+    }
+}
+
+/* ---------------------- Kickoff ---------------------- */
+document.addEventListener("DOMContentLoaded", loadAll);
+
+</script>
+
+</body>
+</html>
