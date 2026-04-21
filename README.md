@@ -1,4 +1,4 @@
-# ClearFund Capital — Small Business Lending Portfolio Analytics Dashboard
+# ClearFund Capital - Small Business Lending Portfolio Analytics Dashboard
 
 Live Dashboard https://clearfund-capital-dashboard.streamlit.app/
 
@@ -181,4 +181,4 @@ clearfund-portfolio-dashboard/
 
 ## About This Project
 
-Built to demonstrate end-to-end financial data analytics capability including SQL query optimization, multi-layer data transformation, automated QA validation, and interactive dashboard delivery — mirroring the core responsibilities of a Financial Data Analyst role in the alternative lending and revenue-based financing space.
+Built to demonstrate end-to-end financial data analytics capability including SQL query optimization, multi-layer data transformation, automated QA validation, and interactive dashboard delivery - mirroring the core responsibilities of a Financial Data Analyst role in the alternative lending and revenue-based financing space.
