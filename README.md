@@ -1,168 +1,184 @@
 # ClearFund Capital — Small Business Lending Portfolio Analytics Dashboard
 
-An end-to-end financial data analytics demo simulating portfolio reporting,
-SQL transformation layering, QA validation, and interactive web dashboard
-delivery for a revenue-based alternative lending company.
+[![🚀 Live Dashboard](https://img.shields.io/badge/🚀_Live_Dashboard-Streamlit_Cloud-FF4B4B?style=for-the-badge)](https://YOUR-STREAMLIT-APP-URL.streamlit.app) &nbsp; [![📁 GitHub Repo](https://img.shields.io/badge/📁_GitHub_Repo-clearfund--portfolio--dashboard-1F4E79?style=for-the-badge)](https://github.com/YOUR-USERNAME/clearfund-portfolio-dashboard)
+
+> An end-to-end financial data analytics demo simulating portfolio reporting, SQL transformation layering, QA validation, and interactive Streamlit dashboard delivery for a revenue-based alternative lending company.
 
 ---
 
-## Why I built this
+## Why I Built This
 
-I built this as a recruiter-facing demo for Financial Data Analyst role at an
-alternative lending company. The job description talks about automating
-financial reporting, validating portfolio data, and shipping analytics to the
-business — so instead of listing those skills on a resume, I built a working
-version of the job.
+I built this project as a recruiter-facing demo for a **Financial Data Analyst** role at **CFG Merchant Solutions**, a revenue-based alternative lending company that finances small and mid-sized businesses.
 
-Every piece of this repo mirrors something an analyst on a lending team
-would actually do on a Tuesday afternoon: generate a realistic book of
-loans, move it through a three-tier SQL pipeline, flag data-quality issues
-before anything reaches a stakeholder, and deliver the final numbers as an
-interactive dashboard a non-technical person can read in thirty seconds.
-The data is mock.
+The goal was to show — not claim — that I can do the actual work the role requires: automate financial reporting, write optimized SQL transformation layers, build QA validation logic that catches bad data before it reaches a stakeholder, and ship an interactive analytics dashboard a portfolio manager could open and use today.
+
+Everything in this repo runs end-to-end from raw Python-generated data to a live Streamlit URL. No screenshots, no slideware.
 
 ---
 
-## Tech stack
+## Tech Stack
 
-- **Python** — data generation (`numpy`, `pandas`) and SQLite loaders
-- **SQL (SQLite)** — raw → cleaned → reporting → QA layer transformations
-- **HTML / CSS / vanilla JavaScript** — single-file dashboard
-- **Chart.js** — all charts in the web dashboard
-- **PapaParse** — client-side CSV parsing
-- **GitHub Pages** — static hosting for the live dashboard
+| Tool | Purpose |
+|---|---|
+| **Python** | Data generation, pipeline scripting, CSV exports |
+| **SQL / SQLite** | Raw, cleaned, and reporting layer transformations |
+| **pandas** | Data manipulation and transformation |
+| **Streamlit** | Interactive multi-view web dashboard |
+| **Plotly** | Chart rendering (bar, line, dual-axis, stacked) |
+| **GitHub Pages / Streamlit Cloud** | Live hosting and sharing |
 
 ---
 
-## Project architecture
+## Project Architecture
 
 ```
-   Raw CSVs (Python Generated)
-        │
-        ▼
-   SQLite — Raw Layer
-        │
-        ▼
-   SQLite — Cleaned Layer
-     (nulls handled, types cast, business rules applied)
-        │
-        ▼
-   SQLite — Reporting Layer  (rpt_ tables)
-        │
-        ▼
-   QA Validation Script
-     (6 automated checks, PASS / FAIL output)
-        │
-        ▼
-   CSV Exports  →  index.html  (Chart.js Dashboard)
-    
+Phase 1 — Python Scripts (Data Generation)
+     ↓
+funded_accounts.csv  +  repayment_transactions.csv  +  business_profiles.csv
+     ↓
+Phase 2 — SQLite Database (clearfund_portfolio.db)
+[ Raw Layer  →  Cleaned Layer  →  Reporting Layer ]
+     ↓
+Phase 2.4 — QA Validation Script
+(6 automated checks, PASS / FAIL output)
+     ↓
+Phase 3.1 — CSV Exports (/tableau_exports folder)
+rpt_portfolio_summary | rpt_industry_performance | rpt_cohort_performance | rpt_monthly_cashflow
+     ↓
+Phase 3.2 — Streamlit App (app.py)
+     ↓
+Streamlit Community Cloud  →  Live Public URL
 ```
 
+---
 
-## Phase breakdown
+## Phase Breakdown
 
-### 1. Data generation
+### Phase 1 — Data Generation
 
-A trio of Python scripts produces a realistic mock portfolio: 800 funded
-loans across six industries, 6,226 monthly repayment transactions, and one
-business-profile record per account. Funding amounts follow a log-normal
-distribution centered around typical small-business ticket sizes rather
-than a flat uniform, so the book looks like something an actual lender
-would hold. Status, late behavior, and default cutoffs are all driven by
-weighted probabilities seeded for reproducibility. About 2% of payment
-records have injected nulls — deliberately — so the QA layer has something
-real to catch.
+Three mock datasets were generated using Python to simulate the book of business of a fictional alternative lender called **ClearFund Capital**: 800 funded accounts, the corresponding monthly repayment transactions, and one business profile per account. Funding amounts use a log-normal distribution clipped to the realistic $10K–$250K small business range, repayment statuses follow a weighted distribution (55% On Track, 20% Paid Off, 15% Late, 10% Defaulted), and roughly 2% nulls are intentionally injected into the transactions table so the QA layer downstream has something real to detect.
 
-### 2. SQL transformation
+### Phase 2 — SQL Transformation Layer
 
-The reporting stack is three-tier: **raw → cleaned → reporting.** The
-cleaned layer casts types, standardizes industry and state codes, handles
-nulls, and derives fields the business cares about — `total_repayable`,
-`net_funding`, `disbursement_cohort`, `is_payment_gap`, `size_segment`.
-The reporting layer builds four analyst-ready tables on top of that:
-account-level portfolio summary, industry performance, cohort vintages,
-and monthly cashflow. Everything is materialized as a table (not a view)
-so downstream consumers — the dashboard, Excel, Tableau — get consistent,
-fast reads.
+Raw CSVs are loaded into a local SQLite database and transformed through three structured layers. The **raw layer** is a direct, typed-as-text load. The **cleaned layer** handles nulls, casts dates, standardizes industry and state values, applies business rules (e.g. `total_repayable = funding_amount × factor_rate`), and derives features like `disbursement_cohort` and `is_payment_gap`. The **reporting layer** produces four aggregated `rpt_` tables ready for direct dashboard consumption. A separate **QA validation script** then runs 6 automated checks — null primary keys, negative balances, orphan accounts, overpayments, status mismatches, and unknown payment statuses — and emits a PASS/FAIL result per check with severity and notes, so a reviewer can immediately see whether the data is dashboard-ready.
 
-### 3. QA validation
+### Phase 3 — Streamlit Dashboard
 
-Before any number goes on a dashboard, it has to pass a six-check gate:
-null primary keys, negative balances, orphan accounts, overpayment beyond
-tolerance, status-vs-ledger mismatch, and unknown payment status. Every
-check writes a row to `qa_validation_results` with a severity, a flagged
-count, a PASS / FAIL verdict, and a note explaining what the check is
-guarding against. In this portfolio three warnings fire — each one has a
-defensible business explanation (just-disbursed loans with no installments
-yet, a known status-vs-ledger reconciliation gap, and the injected null
-rate in the payments feed). That separation of "alarm" vs "expected
-finding" is what makes the QA layer usable in practice.
+`app.py` reads the four reporting CSVs and renders a 4-view interactive dashboard built with Plotly. Each view uses `st.metric` KPI tiles, dynamic filters, color-coded tables, and a consistent finance-appropriate design system (navy primary, status-colored accents, white cards, transparent chart backgrounds). Each view answers one specific business question — overall portfolio health, industry concentration risk, cohort vintage performance, and monthly cashflow vs. plan — rather than dumping every metric on every page.
 
-### 4. Web dashboard
+### Phase 4 — GitHub & Deployment
 
-The final deliverable is a single `index.html` page that parses the
-exported CSVs in the browser and renders four interactive views with
-Chart.js. It loads locally from a plain HTTP server and from GitHub Pages
-with no configuration — the whole app is roughly 38 KB of HTML, CSS, and
-JavaScript with two pinned CDN dependencies.
+The full project is version-controlled on GitHub with a clean folder structure separating data generation, SQL layers, exports, and the dashboard app. The Streamlit app is deployed to **Streamlit Community Cloud** as a single public URL that can be shared directly with recruiters and hiring managers — no install, no setup, just a link.
 
 ---
 
-## How to run locally
+## How To Run Locally
 
-```bash
-# 1. Clone
-git clone https://github.com/<your-username>/Small-Business-Lending-Portfolio-Dashboard.git
-cd Small-Business-Lending-Portfolio-Dashboard
+1. **Clone the repo**
 
-# 2. Install Python dependencies
-pip install -r requirements.txt
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/clearfund-portfolio-dashboard.git
+   cd clearfund-portfolio-dashboard
+   ```
 
-# 3. Generate the mock portfolio (raw CSVs)
-python scripts/generate_funded_accounts.py
-python scripts/generate_repayment_transactions.py
-python scripts/generate_business_profiles.py
+2. **Install dependencies**
 
-# 4. Load into SQLite and build the SQL layers
-python scripts/load_raw_to_sqlite.py
-python scripts/run_sql.py sql/cleaned
-python scripts/run_sql.py sql/reporting
-python scripts/run_sql.py sql/qa
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# 5. Export the reporting tables as CSVs for the dashboard
-python scripts/export_for_tableau.py
+3. **Generate the raw datasets (Phase 1)**
 
-# 6. Serve the dashboard over HTTP (browsers block file:// fetches by default)
-python3 -m http.server 8000
+   ```bash
+   python scripts/generate_funded_accounts.py
+   python scripts/generate_repayment_transactions.py
+   python scripts/generate_business_profiles.py
+   ```
+
+4. **Load and transform — raw → cleaned → reporting (Phase 2)**
+
+   ```bash
+   python scripts/load_raw_to_sqlite.py
+   python scripts/run_sql.py sql/cleaned
+   python scripts/run_sql.py sql/reporting
+   python scripts/run_sql.py sql/qa
+   ```
+
+5. **Export the four dashboard CSVs (Phase 3.1)**
+
+   ```bash
+   python scripts/export_for_tableau.py
+   ```
+
+6. **Launch the Streamlit dashboard (Phase 3.2)**
+
+   ```bash
+   streamlit run app.py
+   ```
+
+7. **Open the dashboard**
+
+   Navigate to <http://localhost:8501> in your browser.
+
+---
+
+## Dashboard Views
+
+| View | Charts Included | Business Question Answered |
+|---|---|---|
+| **Portfolio Overview** | KPI tiles, status bar chart, funded-by-industry bar chart | How is the overall portfolio performing and where is funding concentrated? |
+| **Industry Performance** | Default rate bar, stacked status bar, summary table | Which industries carry the highest default and late payment risk? |
+| **Cohort Performance** | Repaid % line chart, funded bar chart, color-coded cohort table | Which disbursement cohorts are performing best and worst over time? |
+| **Monthly Cashflow** | Dual-line scheduled vs collected, gap bar chart, collection rate KPI | Are monthly collections meeting targets and where are the problem months? |
+
+---
+
+## Project Folder Structure
+
+```
+clearfund-portfolio-dashboard/
+│
+├── app.py                                    # Streamlit dashboard entrypoint (4 views)
+├── requirements.txt                          # streamlit, pandas, plotly
+├── README.md                                 # This file
+│
+├── scripts/                                  # Python pipeline scripts
+│   ├── generate_funded_accounts.py           # Phase 1 — 800 mock funded accounts
+│   ├── generate_repayment_transactions.py    # Phase 1 — monthly repayment ledger
+│   ├── generate_business_profiles.py         # Phase 1 — borrower profiles
+│   ├── load_raw_to_sqlite.py                 # Phase 2 — CSV → SQLite raw layer
+│   ├── run_sql.py                            # Phase 2 — runs all .sql files in a folder
+│   └── export_for_tableau.py                 # Phase 3.1 — rpt_ tables → CSV exports
+│
+├── sql/                                      # SQL transformation layers
+│   ├── cleaned/                              # Cleaned layer (null handling, casting, derived cols)
+│   │   ├── 01_cleaned_funded_accounts.sql
+│   │   ├── 02_cleaned_repayment_transactions.sql
+│   │   └── 03_cleaned_business_profiles.sql
+│   ├── reporting/                            # Reporting layer (aggregated rpt_ tables)
+│   │   ├── 01_rpt_portfolio_summary.sql
+│   │   ├── 02_rpt_industry_performance.sql
+│   │   ├── 03_rpt_cohort_performance.sql
+│   │   └── 04_rpt_monthly_cashflow.sql
+│   └── qa/                                   # QA validation layer
+│       └── 01_qa_validation.sql              # 6 automated checks, PASS/FAIL output
+│
+├── data/                                     # Local working data (gitignored in practice)
+│   ├── raw/                                  # Raw CSVs from Phase 1
+│   │   ├── funded_accounts.csv
+│   │   ├── repayment_transactions.csv
+│   │   └── business_profiles.csv
+│   └── clearfund_portfolio.db                # SQLite database
+│
+└── tableau_exports/                          # Reporting CSVs the Streamlit app reads
+    ├── rpt_portfolio_summary.csv
+    ├── rpt_industry_performance.csv
+    ├── rpt_cohort_performance.csv
+    └── rpt_monthly_cashflow.csv
 ```
 
-Then open **http://localhost:8000/index.html** in any modern browser.
-
 ---
 
-## Dashboard views
+## About This Project
 
-1. **Portfolio Overview** — How big is the book, and where are the dollars?
-   Answers total funded, collected, outstanding, and overall collection
-   rate in four tiles, with an industry breakdown and status mix.
-2. **Industry Performance** — Which industries are dragging on the
-   portfolio? Compares default and late rates side-by-side and shows the
-   status mix per industry.
-3. **Cohort Performance** — Are newer loans performing better or worse
-   than older ones? Tracks average percent repaid and default rate by
-   disbursement month, with a color-coded detail table.
-4. **Monthly Cashflow** — Are we collecting what we're owed this month?
-   Plots scheduled vs. actual collections over time and flags months with
-   above-average shortfall.
-
----
-
-## Closing note
-
-Built to demonstrate end-to-end financial data analytics capability
-including SQL query optimization, data transformation layering, QA
-validation logic, and dashboard delivery — mirroring the core
-responsibilities of a Financial Data Analyst role in the alternative
-lending space.
-
-Built by **Pooja Pranavi Nalamothu**.
+Built to demonstrate end-to-end financial data analytics capability including SQL query optimization, multi-layer data transformation, automated QA validation, and interactive dashboard delivery — mirroring the core responsibilities of a Financial Data Analyst role in the alternative lending and revenue-based financing space.
