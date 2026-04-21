@@ -1,6 +1,6 @@
 # ClearFund Capital — Small Business Lending Portfolio Analytics Dashboard
 
-[![🚀 Live Dashboard](https://img.shields.io/badge/🚀_Live_Dashboard-Streamlit_Cloud-FF4B4B?style=for-the-badge)](https://YOUR-STREAMLIT-APP-URL.streamlit.app) &nbsp; [![📁 GitHub Repo](https://img.shields.io/badge/📁_GitHub_Repo-clearfund--portfolio--dashboard-1F4E79?style=for-the-badge)](https://github.com/YOUR-USERNAME/clearfund-portfolio-dashboard)
+Live Dashboard https://clearfund-capital-dashboard.streamlit.app/
 
 > An end-to-end financial data analytics demo simulating portfolio reporting, SQL transformation layering, QA validation, and interactive Streamlit dashboard delivery for a revenue-based alternative lending company.
 
